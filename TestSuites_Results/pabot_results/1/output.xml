@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:40:27.086" rpa="false" schemaversion="4">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="CaptureScreen" source="C:\Users\user\PycharmProjects\automation\TestCase\CaptureScreen.robot">
+<test id="s1-s1-t1" name="ScreenShotTest" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 01:40:27.303" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230825 01:40:27.302" endtime="20230825 01:40:36.696"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230825 01:40:36.696" endtime="20230825 01:40:36.819"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:40:46.820" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230825 01:40:36.819" endtime="20230825 01:40:46.820"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230825 01:40:46.820" endtime="20230825 01:40:46.839"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:40:46.840" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20230825 01:40:46.839" endtime="20230825 01:40:46.974"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:40:46.975" level="INFO">Typing text 'admin123' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20230825 01:40:46.974" endtime="20230825 01:40:47.105"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]/div[1]/div/div[1]/div/div[1]/img</arg>
+<arg>logo.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230825 01:40:47.203" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="logo.png"&gt;&lt;img src="logo.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230825 01:40:47.106" endtime="20230825 01:40:47.203"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>LoginTC.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230825 01:40:47.379" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="LoginTC.png"&gt;&lt;img src="LoginTC.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230825 01:40:47.203" endtime="20230825 01:40:47.379"/>
+</kw>
+<doc>網頁畫面截圖</doc>
+<status status="PASS" starttime="20230825 01:40:27.301" endtime="20230825 01:40:47.379"/>
+</test>
+<status status="PASS" starttime="20230825 01:40:27.109" endtime="20230825 01:40:47.380"/>
+</suite>
+<status status="PASS" starttime="20230825 01:40:27.093" endtime="20230825 01:40:47.381"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="CaptureScreen">Suites.CaptureScreen</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

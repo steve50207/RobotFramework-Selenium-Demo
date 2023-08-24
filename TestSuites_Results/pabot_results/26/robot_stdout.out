@@ -1,0 +1,15 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Userkeywords                                                           
+==============================================================================
+UserkeywordTest :: 使用自定義keyword lauchBrowser取代open browser,... nopCommerce demo store
+| PASS |
+------------------------------------------------------------------------------
+Suites.Userkeywords                                                   | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\user\PycharmProjects\automation\TestSuites_Results\pabot_results\26\output.xml

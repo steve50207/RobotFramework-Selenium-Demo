@@ -1,0 +1,21 @@
+#Login Page Elements
+txt_login_Email = "xpath://input[@id='Email']"
+txt_login_Password = "xpath://input[@id='Password']"
+btn_logIn = "xpath://button[contains(text(),'Log in')]"
+
+#Registration Page Elements
+button_detail = "id:details-button"
+link_GoToUrl = "id:proceed-link"
+txt_First_Name = "xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]"
+txt_Last_Name = "xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]"
+radio_button_Gender = "inlineRadioOptions"
+list_box_Hobbies = "id:exampleFormControlSelect2"
+drop_down_Department_Office = "name:department"
+txt_Username = "xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]"
+txt_Password = "xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]"
+txt_Confirm_Password = "xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]"
+txt_Email = "xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]"
+txt_Contact_No = "xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]"
+txt_Additional_Info = "xpath://textarea[@id='exampleFormControlTextarea1']"
+button_Submit = "xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]"
+alert_Message = "xpath://div[@id='success_message']"

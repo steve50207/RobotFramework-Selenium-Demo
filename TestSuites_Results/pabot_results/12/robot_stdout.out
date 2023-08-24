@@ -1,0 +1,17 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.NavigationalKeywords                                                   
+==============================================================================
+NavigationTest :: 控制網頁跳軟與返回                                  https://www.google.com/
+https://www.bing.com/
+https://www.google.com/
+| PASS |
+------------------------------------------------------------------------------
+Suites.NavigationalKeywords                                           | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\user\PycharmProjects\automation\TestSuites_Results\pabot_results\12\output.xml

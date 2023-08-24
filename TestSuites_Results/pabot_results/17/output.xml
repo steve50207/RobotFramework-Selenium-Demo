@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:42:00.438" rpa="false" schemaversion="4">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="SpeedTests" source="C:\Users\user\PycharmProjects\automation\TestCase\SpeedTests.robot">
+<test id="s1-s1-t1" name="RegSpeedTest" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 01:42:00.691" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/register'.</msg>
+<status status="PASS" starttime="20230825 01:42:00.690" endtime="20230825 01:42:05.741"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230825 01:42:05.742" endtime="20230825 01:42:05.904"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230825 01:42:05.905" endtime="20230825 01:42:05.907"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:42:05.910" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20230825 01:42:05.908" endtime="20230825 01:42:12.049"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:FirstName</arg>
+<arg>Kuan Yu</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:42:12.050" level="INFO">Typing text 'Kuan Yu' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20230825 01:42:12.049" endtime="20230825 01:42:18.226"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:LastName</arg>
+<arg>Chen</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:42:18.227" level="INFO">Typing text 'Chen' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20230825 01:42:18.226" endtime="20230825 01:42:24.394"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Email</arg>
+<arg>kcem104@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:42:24.395" level="INFO">Typing text 'kcem104@gmail.com' into text field 'name:Email'.</msg>
+<status status="PASS" starttime="20230825 01:42:24.394" endtime="20230825 01:42:30.677"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Password</arg>
+<arg>G#n3ik9Th54STN</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:42:30.678" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'name:Password'.</msg>
+<status status="PASS" starttime="20230825 01:42:30.677" endtime="20230825 01:42:36.799"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:ConfirmPassword</arg>
+<arg>G#n3ik9Th54STN</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:42:36.800" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20230825 01:42:36.799" endtime="20230825 01:42:42.926"/>
+</kw>
+<doc>進行網頁註冊時,測試每個keyword執行之間的不同延遲時間</doc>
+<status status="PASS" starttime="20230825 01:42:00.688" endtime="20230825 01:42:42.926"/>
+</test>
+<status status="PASS" starttime="20230825 01:42:00.463" endtime="20230825 01:42:42.927"/>
+</suite>
+<status status="PASS" starttime="20230825 01:42:00.446" endtime="20230825 01:42:42.928"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="SpeedTests">Suites.SpeedTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,2681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:35:44.740" rpa="false" schemaversion="4">
+<suite id="s1" name="RegistTest" source="C:\Users\user\PycharmProjects\automation\TestCase\RegistTest.robot">
+<kw name="Open my Browser" library="regist_keywords" type="SETUP">
+<arg>${Regist_Url}</arg>
+<arg>${Browser}</arg>
+<arg>${Options}</arg>
+<doc>開啟瀏覽器並略過網頁驗證過期問題</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Siteurl}</arg>
+<arg>${Browser}</arg>
+<arg>${Options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 01:35:45.610" level="INFO">Opening browser 'chrome' to base url 'https://mytestingthoughts.com/Sample/home.html'.</msg>
+<status status="PASS" starttime="20230825 01:35:45.610" endtime="20230825 01:35:49.215"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230825 01:35:49.216" endtime="20230825 01:35:49.340"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_detail}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:35:49.341" level="INFO">Clicking button 'id:details-button'.</msg>
+<status status="PASS" starttime="20230825 01:35:49.340" endtime="20230825 01:35:49.444"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${link_GoToUrl}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230825 01:35:49.445" level="INFO">Clicking link 'id:proceed-link'.</msg>
+<status status="PASS" starttime="20230825 01:35:49.444" endtime="20230825 01:35:49.514"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:45.609" endtime="20230825 01:35:49.514"/>
+</kw>
+<test id="s1-t1" name="RegistTestWithExcel" line="16">
+<kw name="RegistTest">
+<arg>Ronald</arg>
+<arg>Reagan</arg>
+<arg>Male</arg>
+<arg>Reading</arg>
+<arg>Department of Engineering</arg>
+<arg>Ronald1294</arg>
+<arg>95xyX2ra</arg>
+<arg>Ronald1294@gmail.com</arg>
+<arg>(001)6315789</arg>
+<arg>My philosophy of life is that if we make up our mind what we are going to make of our lives, then work hard toward that goal, we never lose – somehow we win out.</arg>
+<doc>進行網頁註冊功能驗證,包含填寫姓名,性別,嗜好,任職單位,帳號,密碼,連絡電話,備註訊息,最後驗證註冊訊息是否出現在網頁尾端</doc>
+<kw name="Enter First Name" library="regist_keywords">
+<arg>${FirstName}</arg>
+<doc>輸入名子</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_First_Name}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:35:49.519" level="INFO">Typing text 'Ronald' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:35:49.518" endtime="20230825 01:35:54.561"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:35:55.061" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:35:54.561" endtime="20230825 01:35:55.061"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:49.518" endtime="20230825 01:35:55.061"/>
+</kw>
+<kw name="Enter Last Name" library="regist_keywords">
+<arg>${LastName}</arg>
+<doc>輸入姓氏</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Last_Name}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:35:55.064" level="INFO">Typing text 'Reagan' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:35:55.063" endtime="20230825 01:35:55.250"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:35:55.751" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:35:55.250" endtime="20230825 01:35:55.751"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:55.062" endtime="20230825 01:35:55.751"/>
+</kw>
+<kw name="Select Gender" library="regist_keywords">
+<arg>${Gender}</arg>
+<doc>選擇性別(單選紐)</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_button_Gender}</arg>
+<arg>${Gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:35:55.753" level="INFO">Selecting 'Male' from radio button 'inlineRadioOptions'.</msg>
+<status status="PASS" starttime="20230825 01:35:55.752" endtime="20230825 01:35:55.849"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:35:56.349" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:35:55.849" endtime="20230825 01:35:56.349"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:55.751" endtime="20230825 01:35:56.349"/>
+</kw>
+<kw name="Select Hobby" library="regist_keywords">
+<arg>${Hobby}</arg>
+<doc>選擇興趣(列表框)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${list_box_Hobbies}</arg>
+<arg>${Hobby}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:35:56.352" level="INFO">Selecting options from selection list 'id:exampleFormControlSelect2' by label Reading.</msg>
+<status status="PASS" starttime="20230825 01:35:56.351" endtime="20230825 01:35:56.489"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:35:56.989" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:35:56.489" endtime="20230825 01:35:56.989"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:56.350" endtime="20230825 01:35:56.989"/>
+</kw>
+<kw name="Select Department / Office" library="regist_keywords">
+<arg>${Department}</arg>
+<doc>選擇興趣(下拉式選單)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drop_down_Department_Office}</arg>
+<arg>${Department}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:35:56.991" level="INFO">Selecting options from selection list 'name:department' by label Department of Engineering.</msg>
+<status status="PASS" starttime="20230825 01:35:56.990" endtime="20230825 01:35:57.150"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:35:57.651" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:35:57.150" endtime="20230825 01:35:57.651"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:56.989" endtime="20230825 01:35:57.651"/>
+</kw>
+<kw name="Enter Username" library="regist_keywords">
+<arg>${Username}</arg>
+<doc>輸入帳號</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:35:57.654" level="INFO">Typing text 'Ronald1294' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:35:57.653" endtime="20230825 01:35:57.838"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:35:58.339" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:35:57.838" endtime="20230825 01:35:58.339"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:57.652" endtime="20230825 01:35:58.339"/>
+</kw>
+<kw name="Enter Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:35:58.343" level="INFO">Typing text '95xyX2ra' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:35:58.341" endtime="20230825 01:35:58.527"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:35:59.028" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:35:58.528" endtime="20230825 01:35:59.028"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:58.340" endtime="20230825 01:35:59.028"/>
+</kw>
+<kw name="Enter Confirm Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入確認密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Confirm_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:35:59.031" level="INFO">Typing text '95xyX2ra' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:35:59.030" endtime="20230825 01:35:59.228"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:35:59.728" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:35:59.228" endtime="20230825 01:35:59.728"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:59.029" endtime="20230825 01:35:59.728"/>
+</kw>
+<kw name="Enter E-Mail" library="regist_keywords">
+<arg>${Email}</arg>
+<doc>輸入信箱</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:35:59.731" level="INFO">Typing text 'Ronald1294@gmail.com' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:35:59.730" endtime="20230825 01:36:00.012"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:00.514" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:00.012" endtime="20230825 01:36:00.514"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:59.728" endtime="20230825 01:36:00.514"/>
+</kw>
+<kw name="Enter Contact No" library="regist_keywords">
+<arg>${ContactNo}</arg>
+<doc>輸入連絡電話</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Contact_No}</arg>
+<arg>${ContactNo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:00.516" level="INFO">Typing text '(001)6315789' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:00.515" endtime="20230825 01:36:00.739"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:01.240" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:00.739" endtime="20230825 01:36:01.240"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:00.514" endtime="20230825 01:36:01.240"/>
+</kw>
+<kw name="Enter Additional Info" library="regist_keywords">
+<arg>${AdditionalInfo}</arg>
+<doc>輸入額外資訊</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Additional_Info}</arg>
+<arg>${AdditionalInfo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:01.244" level="INFO">Typing text 'My philosophy of life is that if we make up our mind what we are going to make of our lives, then work hard toward that goal, we never lose – somehow we win out.' into text field 'xpath://textarea[@id='exampleFormControlTextarea1']'.</msg>
+<status status="PASS" starttime="20230825 01:36:01.242" endtime="20230825 01:36:01.711"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:02.212" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:01.711" endtime="20230825 01:36:02.212"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:01.241" endtime="20230825 01:36:02.212"/>
+</kw>
+<kw name="Press Submit" library="regist_keywords">
+<doc>點擊註冊按鈕</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:02.215" level="INFO">Clicking button 'xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:02.213" endtime="20230825 01:36:02.373"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:02.873" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:02.373" endtime="20230825 01:36:02.873"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:02.213" endtime="20230825 01:36:02.873"/>
+</kw>
+<kw name="Verify Successful Registion" library="regist_keywords">
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Department}</arg>
+<arg>${Email}</arg>
+<arg>${ContactNo}</arg>
+<doc>驗證註冊成功,先將網頁捲動置尾端,驗證出現註冊成功訊息,並且網頁尾端表格出現姓名,任職單位,信箱,連絡電話等對應註冊訊息</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:36:02.877" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:36:02.875" endtime="20230825 01:36:02.897"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:02.949" level="INFO">Current page contains text 'Success!.'.</msg>
+<status status="PASS" starttime="20230825 01:36:02.897" endtime="20230825 01:36:02.949"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${FirstName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:02.979" level="INFO">Current page contains text 'Ronald'.</msg>
+<status status="PASS" starttime="20230825 01:36:02.949" endtime="20230825 01:36:02.979"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LastName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:02.998" level="INFO">Current page contains text 'Reagan'.</msg>
+<status status="PASS" starttime="20230825 01:36:02.979" endtime="20230825 01:36:02.998"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Department}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:03.019" level="INFO">Current page contains text 'Department of Engineering'.</msg>
+<status status="PASS" starttime="20230825 01:36:02.998" endtime="20230825 01:36:03.019"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:03.038" level="INFO">Current page contains text 'Ronald1294@gmail.com'.</msg>
+<status status="PASS" starttime="20230825 01:36:03.019" endtime="20230825 01:36:03.038"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ContactNo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:03.052" level="INFO">Current page contains text '(001)6315789'.</msg>
+<status status="PASS" starttime="20230825 01:36:03.038" endtime="20230825 01:36:03.052"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:06.053" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:36:03.052" endtime="20230825 01:36:06.053"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:02.873" endtime="20230825 01:36:06.053"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:49.518" endtime="20230825 01:36:06.054"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:49.515" endtime="20230825 01:36:06.054"/>
+</test>
+<test id="s1-t2" name="RegistTestWithExcel" line="16">
+<kw name="RegistTest">
+<arg>Abraham</arg>
+<arg>Lincoln</arg>
+<arg>Male</arg>
+<arg>Singing</arg>
+<arg>Department of Agriculture</arg>
+<arg>Abraham7861</arg>
+<arg>Mu9fAh7N</arg>
+<arg>Abraham7861@gmail.com</arg>
+<arg>(001)8142967</arg>
+<arg>A man watches his pear tree, day after day, impatient for the ripening of the fruit. Let him attempt to force the process, and he may spoil both the fruit and tree. But let him patiently wait, and the ripe pear, at length, falls into his lap.</arg>
+<doc>進行網頁註冊功能驗證,包含填寫姓名,性別,嗜好,任職單位,帳號,密碼,連絡電話,備註訊息,最後驗證註冊訊息是否出現在網頁尾端</doc>
+<kw name="Enter First Name" library="regist_keywords">
+<arg>${FirstName}</arg>
+<doc>輸入名子</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_First_Name}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:06.065" level="INFO">Typing text 'Abraham' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:06.062" endtime="20230825 01:36:06.322"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:06.823" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:06.322" endtime="20230825 01:36:06.823"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:06.062" endtime="20230825 01:36:06.823"/>
+</kw>
+<kw name="Enter Last Name" library="regist_keywords">
+<arg>${LastName}</arg>
+<doc>輸入姓氏</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Last_Name}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:06.824" level="INFO">Typing text 'Lincoln' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:06.823" endtime="20230825 01:36:06.939"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:07.440" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:06.939" endtime="20230825 01:36:07.440"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:06.823" endtime="20230825 01:36:07.440"/>
+</kw>
+<kw name="Select Gender" library="regist_keywords">
+<arg>${Gender}</arg>
+<doc>選擇性別(單選紐)</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_button_Gender}</arg>
+<arg>${Gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:36:07.442" level="INFO">Selecting 'Male' from radio button 'inlineRadioOptions'.</msg>
+<status status="PASS" starttime="20230825 01:36:07.442" endtime="20230825 01:36:07.605"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:08.107" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:07.605" endtime="20230825 01:36:08.107"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:07.441" endtime="20230825 01:36:08.107"/>
+</kw>
+<kw name="Select Hobby" library="regist_keywords">
+<arg>${Hobby}</arg>
+<doc>選擇興趣(列表框)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${list_box_Hobbies}</arg>
+<arg>${Hobby}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:08.109" level="INFO">Selecting options from selection list 'id:exampleFormControlSelect2' by label Singing.</msg>
+<status status="PASS" starttime="20230825 01:36:08.108" endtime="20230825 01:36:08.226"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:08.728" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:08.227" endtime="20230825 01:36:08.728"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:08.107" endtime="20230825 01:36:08.728"/>
+</kw>
+<kw name="Select Department / Office" library="regist_keywords">
+<arg>${Department}</arg>
+<doc>選擇興趣(下拉式選單)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drop_down_Department_Office}</arg>
+<arg>${Department}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:08.731" level="INFO">Selecting options from selection list 'name:department' by label Department of Agriculture.</msg>
+<status status="PASS" starttime="20230825 01:36:08.730" endtime="20230825 01:36:08.840"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:09.340" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:08.840" endtime="20230825 01:36:09.340"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:08.729" endtime="20230825 01:36:09.340"/>
+</kw>
+<kw name="Enter Username" library="regist_keywords">
+<arg>${Username}</arg>
+<doc>輸入帳號</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:09.343" level="INFO">Typing text 'Abraham7861' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:09.342" endtime="20230825 01:36:09.513"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:10.013" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:09.513" endtime="20230825 01:36:10.013"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:09.341" endtime="20230825 01:36:10.014"/>
+</kw>
+<kw name="Enter Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:10.017" level="INFO">Typing text 'Mu9fAh7N' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:10.015" endtime="20230825 01:36:10.193"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:10.693" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:10.193" endtime="20230825 01:36:10.694"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:10.014" endtime="20230825 01:36:10.694"/>
+</kw>
+<kw name="Enter Confirm Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入確認密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Confirm_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:10.697" level="INFO">Typing text 'Mu9fAh7N' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:10.695" endtime="20230825 01:36:10.907"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:11.408" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:10.907" endtime="20230825 01:36:11.408"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:10.694" endtime="20230825 01:36:11.408"/>
+</kw>
+<kw name="Enter E-Mail" library="regist_keywords">
+<arg>${Email}</arg>
+<doc>輸入信箱</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:11.411" level="INFO">Typing text 'Abraham7861@gmail.com' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:11.409" endtime="20230825 01:36:11.624"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:12.125" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:11.625" endtime="20230825 01:36:12.125"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:11.409" endtime="20230825 01:36:12.125"/>
+</kw>
+<kw name="Enter Contact No" library="regist_keywords">
+<arg>${ContactNo}</arg>
+<doc>輸入連絡電話</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Contact_No}</arg>
+<arg>${ContactNo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:12.128" level="INFO">Typing text '(001)8142967' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:12.127" endtime="20230825 01:36:12.339"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:12.841" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:12.340" endtime="20230825 01:36:12.841"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:12.126" endtime="20230825 01:36:12.841"/>
+</kw>
+<kw name="Enter Additional Info" library="regist_keywords">
+<arg>${AdditionalInfo}</arg>
+<doc>輸入額外資訊</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Additional_Info}</arg>
+<arg>${AdditionalInfo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:12.844" level="INFO">Typing text 'A man watches his pear tree, day after day, impatient for the ripening of the fruit. Let him attempt to force the process, and he may spoil both the fruit and tree. But let him patiently wait, and the ripe pear, at length, falls into his lap.' into text field 'xpath://textarea[@id='exampleFormControlTextarea1']'.</msg>
+<status status="PASS" starttime="20230825 01:36:12.842" endtime="20230825 01:36:13.386"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:13.887" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:13.386" endtime="20230825 01:36:13.887"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:12.841" endtime="20230825 01:36:13.887"/>
+</kw>
+<kw name="Press Submit" library="regist_keywords">
+<doc>點擊註冊按鈕</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:13.890" level="INFO">Clicking button 'xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:13.889" endtime="20230825 01:36:14.014"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:14.515" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:14.014" endtime="20230825 01:36:14.515"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:13.888" endtime="20230825 01:36:14.515"/>
+</kw>
+<kw name="Verify Successful Registion" library="regist_keywords">
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Department}</arg>
+<arg>${Email}</arg>
+<arg>${ContactNo}</arg>
+<doc>驗證註冊成功,先將網頁捲動置尾端,驗證出現註冊成功訊息,並且網頁尾端表格出現姓名,任職單位,信箱,連絡電話等對應註冊訊息</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:36:14.519" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:36:14.517" endtime="20230825 01:36:14.547"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:14.590" level="INFO">Current page contains text 'Success!.'.</msg>
+<status status="PASS" starttime="20230825 01:36:14.548" endtime="20230825 01:36:14.590"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${FirstName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:14.620" level="INFO">Current page contains text 'Abraham'.</msg>
+<status status="PASS" starttime="20230825 01:36:14.591" endtime="20230825 01:36:14.620"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LastName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:14.639" level="INFO">Current page contains text 'Lincoln'.</msg>
+<status status="PASS" starttime="20230825 01:36:14.621" endtime="20230825 01:36:14.639"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Department}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:14.658" level="INFO">Current page contains text 'Department of Agriculture'.</msg>
+<status status="PASS" starttime="20230825 01:36:14.639" endtime="20230825 01:36:14.658"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:14.676" level="INFO">Current page contains text 'Abraham7861@gmail.com'.</msg>
+<status status="PASS" starttime="20230825 01:36:14.658" endtime="20230825 01:36:14.676"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ContactNo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:14.692" level="INFO">Current page contains text '(001)8142967'.</msg>
+<status status="PASS" starttime="20230825 01:36:14.677" endtime="20230825 01:36:14.692"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:17.692" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:36:14.692" endtime="20230825 01:36:17.692"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:14.515" endtime="20230825 01:36:17.693"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:06.060" endtime="20230825 01:36:17.693"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:06.056" endtime="20230825 01:36:17.693"/>
+</test>
+<test id="s1-t3" name="RegistTestWithExcel" line="16">
+<kw name="RegistTest">
+<arg>Martin</arg>
+<arg>Luther</arg>
+<arg>Male</arg>
+<arg>Swimming</arg>
+<arg>Accounting Office</arg>
+<arg>Luther9283</arg>
+<arg>NNTh47yx</arg>
+<arg>Luther9283@gmail.com</arg>
+<arg>(001)1629347</arg>
+<arg>True peace is not merely the absence of tension: it is the presence of justice.</arg>
+<doc>進行網頁註冊功能驗證,包含填寫姓名,性別,嗜好,任職單位,帳號,密碼,連絡電話,備註訊息,最後驗證註冊訊息是否出現在網頁尾端</doc>
+<kw name="Enter First Name" library="regist_keywords">
+<arg>${FirstName}</arg>
+<doc>輸入名子</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_First_Name}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:17.703" level="INFO">Typing text 'Martin' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:17.701" endtime="20230825 01:36:17.916"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:18.417" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:17.916" endtime="20230825 01:36:18.417"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:17.700" endtime="20230825 01:36:18.417"/>
+</kw>
+<kw name="Enter Last Name" library="regist_keywords">
+<arg>${LastName}</arg>
+<doc>輸入姓氏</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Last_Name}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:18.420" level="INFO">Typing text 'Luther' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:18.419" endtime="20230825 01:36:18.649"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:19.150" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:18.649" endtime="20230825 01:36:19.150"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:18.418" endtime="20230825 01:36:19.150"/>
+</kw>
+<kw name="Select Gender" library="regist_keywords">
+<arg>${Gender}</arg>
+<doc>選擇性別(單選紐)</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_button_Gender}</arg>
+<arg>${Gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:36:19.152" level="INFO">Selecting 'Male' from radio button 'inlineRadioOptions'.</msg>
+<status status="PASS" starttime="20230825 01:36:19.152" endtime="20230825 01:36:19.290"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:19.791" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:19.290" endtime="20230825 01:36:19.791"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:19.151" endtime="20230825 01:36:19.791"/>
+</kw>
+<kw name="Select Hobby" library="regist_keywords">
+<arg>${Hobby}</arg>
+<doc>選擇興趣(列表框)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${list_box_Hobbies}</arg>
+<arg>${Hobby}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:19.795" level="INFO">Selecting options from selection list 'id:exampleFormControlSelect2' by label Swimming.</msg>
+<status status="PASS" starttime="20230825 01:36:19.792" endtime="20230825 01:36:19.966"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:20.466" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:19.966" endtime="20230825 01:36:20.466"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:19.791" endtime="20230825 01:36:20.466"/>
+</kw>
+<kw name="Select Department / Office" library="regist_keywords">
+<arg>${Department}</arg>
+<doc>選擇興趣(下拉式選單)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drop_down_Department_Office}</arg>
+<arg>${Department}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:20.469" level="INFO">Selecting options from selection list 'name:department' by label Accounting Office.</msg>
+<status status="PASS" starttime="20230825 01:36:20.468" endtime="20230825 01:36:20.622"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:21.123" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:20.622" endtime="20230825 01:36:21.123"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:20.466" endtime="20230825 01:36:21.123"/>
+</kw>
+<kw name="Enter Username" library="regist_keywords">
+<arg>${Username}</arg>
+<doc>輸入帳號</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:21.126" level="INFO">Typing text 'Luther9283' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:21.125" endtime="20230825 01:36:21.296"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:21.798" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:21.296" endtime="20230825 01:36:21.798"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:21.124" endtime="20230825 01:36:21.798"/>
+</kw>
+<kw name="Enter Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:21.801" level="INFO">Typing text 'NNTh47yx' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:21.799" endtime="20230825 01:36:22.039"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:22.540" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:22.040" endtime="20230825 01:36:22.540"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:21.798" endtime="20230825 01:36:22.540"/>
+</kw>
+<kw name="Enter Confirm Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入確認密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Confirm_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:22.543" level="INFO">Typing text 'NNTh47yx' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:22.541" endtime="20230825 01:36:22.745"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:23.246" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:22.746" endtime="20230825 01:36:23.246"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:22.540" endtime="20230825 01:36:23.246"/>
+</kw>
+<kw name="Enter E-Mail" library="regist_keywords">
+<arg>${Email}</arg>
+<doc>輸入信箱</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:23.249" level="INFO">Typing text 'Luther9283@gmail.com' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:23.248" endtime="20230825 01:36:23.431"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:23.931" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:23.431" endtime="20230825 01:36:23.931"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:23.247" endtime="20230825 01:36:23.931"/>
+</kw>
+<kw name="Enter Contact No" library="regist_keywords">
+<arg>${ContactNo}</arg>
+<doc>輸入連絡電話</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Contact_No}</arg>
+<arg>${ContactNo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:23.934" level="INFO">Typing text '(001)1629347' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:23.933" endtime="20230825 01:36:24.112"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:24.612" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:24.112" endtime="20230825 01:36:24.612"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:23.932" endtime="20230825 01:36:24.612"/>
+</kw>
+<kw name="Enter Additional Info" library="regist_keywords">
+<arg>${AdditionalInfo}</arg>
+<doc>輸入額外資訊</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Additional_Info}</arg>
+<arg>${AdditionalInfo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:24.615" level="INFO">Typing text 'True peace is not merely the absence of tension: it is the presence of justice.' into text field 'xpath://textarea[@id='exampleFormControlTextarea1']'.</msg>
+<status status="PASS" starttime="20230825 01:36:24.614" endtime="20230825 01:36:24.923"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:25.423" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:24.923" endtime="20230825 01:36:25.423"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:24.612" endtime="20230825 01:36:25.423"/>
+</kw>
+<kw name="Press Submit" library="regist_keywords">
+<doc>點擊註冊按鈕</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:25.426" level="INFO">Clicking button 'xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:25.424" endtime="20230825 01:36:25.572"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:26.072" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:25.572" endtime="20230825 01:36:26.072"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:25.424" endtime="20230825 01:36:26.073"/>
+</kw>
+<kw name="Verify Successful Registion" library="regist_keywords">
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Department}</arg>
+<arg>${Email}</arg>
+<arg>${ContactNo}</arg>
+<doc>驗證註冊成功,先將網頁捲動置尾端,驗證出現註冊成功訊息,並且網頁尾端表格出現姓名,任職單位,信箱,連絡電話等對應註冊訊息</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:36:26.077" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:36:26.075" endtime="20230825 01:36:26.095"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:26.134" level="INFO">Current page contains text 'Success!.'.</msg>
+<status status="PASS" starttime="20230825 01:36:26.095" endtime="20230825 01:36:26.134"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${FirstName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:26.167" level="INFO">Current page contains text 'Martin'.</msg>
+<status status="PASS" starttime="20230825 01:36:26.135" endtime="20230825 01:36:26.167"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LastName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:26.199" level="INFO">Current page contains text 'Luther'.</msg>
+<status status="PASS" starttime="20230825 01:36:26.168" endtime="20230825 01:36:26.200"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Department}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:26.232" level="INFO">Current page contains text 'Accounting Office'.</msg>
+<status status="PASS" starttime="20230825 01:36:26.200" endtime="20230825 01:36:26.232"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:26.263" level="INFO">Current page contains text 'Luther9283@gmail.com'.</msg>
+<status status="PASS" starttime="20230825 01:36:26.232" endtime="20230825 01:36:26.263"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ContactNo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:26.294" level="INFO">Current page contains text '(001)1629347'.</msg>
+<status status="PASS" starttime="20230825 01:36:26.264" endtime="20230825 01:36:26.294"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:29.296" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:36:26.295" endtime="20230825 01:36:29.296"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:26.073" endtime="20230825 01:36:29.296"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:17.699" endtime="20230825 01:36:29.296"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:17.694" endtime="20230825 01:36:29.297"/>
+</test>
+<test id="s1-t4" name="RegistTestWithExcel" line="16">
+<kw name="RegistTest">
+<arg>George</arg>
+<arg>Washington</arg>
+<arg>Male</arg>
+<arg>Running</arg>
+<arg>Tresurer's Office</arg>
+<arg>Washington2436</arg>
+<arg>9gVukRVQ</arg>
+<arg>Washington2436@gmail.com</arg>
+<arg>(001)3491065</arg>
+<arg>Be not forward, but friendly and courteous; the first to salute, hear and answer; and be not pensive when it is time to converse.</arg>
+<doc>進行網頁註冊功能驗證,包含填寫姓名,性別,嗜好,任職單位,帳號,密碼,連絡電話,備註訊息,最後驗證註冊訊息是否出現在網頁尾端</doc>
+<kw name="Enter First Name" library="regist_keywords">
+<arg>${FirstName}</arg>
+<doc>輸入名子</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_First_Name}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:29.311" level="INFO">Typing text 'George' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:29.306" endtime="20230825 01:36:29.505"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:30.007" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:29.505" endtime="20230825 01:36:30.007"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:29.304" endtime="20230825 01:36:30.007"/>
+</kw>
+<kw name="Enter Last Name" library="regist_keywords">
+<arg>${LastName}</arg>
+<doc>輸入姓氏</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Last_Name}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:30.010" level="INFO">Typing text 'Washington' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:30.009" endtime="20230825 01:36:30.226"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:30.726" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:30.226" endtime="20230825 01:36:30.726"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:30.008" endtime="20230825 01:36:30.726"/>
+</kw>
+<kw name="Select Gender" library="regist_keywords">
+<arg>${Gender}</arg>
+<doc>選擇性別(單選紐)</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_button_Gender}</arg>
+<arg>${Gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:36:30.729" level="INFO">Selecting 'Male' from radio button 'inlineRadioOptions'.</msg>
+<status status="PASS" starttime="20230825 01:36:30.728" endtime="20230825 01:36:30.863"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:31.364" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:30.863" endtime="20230825 01:36:31.364"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:30.727" endtime="20230825 01:36:31.364"/>
+</kw>
+<kw name="Select Hobby" library="regist_keywords">
+<arg>${Hobby}</arg>
+<doc>選擇興趣(列表框)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${list_box_Hobbies}</arg>
+<arg>${Hobby}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:31.367" level="INFO">Selecting options from selection list 'id:exampleFormControlSelect2' by label Running.</msg>
+<status status="PASS" starttime="20230825 01:36:31.366" endtime="20230825 01:36:31.502"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:32.002" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:31.502" endtime="20230825 01:36:32.002"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:31.365" endtime="20230825 01:36:32.002"/>
+</kw>
+<kw name="Select Department / Office" library="regist_keywords">
+<arg>${Department}</arg>
+<doc>選擇興趣(下拉式選單)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drop_down_Department_Office}</arg>
+<arg>${Department}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:32.005" level="INFO">Selecting options from selection list 'name:department' by label Tresurer's Office.</msg>
+<status status="PASS" starttime="20230825 01:36:32.004" endtime="20230825 01:36:32.138"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:32.638" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:32.138" endtime="20230825 01:36:32.638"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:32.003" endtime="20230825 01:36:32.638"/>
+</kw>
+<kw name="Enter Username" library="regist_keywords">
+<arg>${Username}</arg>
+<doc>輸入帳號</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:32.641" level="INFO">Typing text 'Washington2436' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:32.640" endtime="20230825 01:36:32.896"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:33.397" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:32.896" endtime="20230825 01:36:33.397"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:32.639" endtime="20230825 01:36:33.397"/>
+</kw>
+<kw name="Enter Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:33.400" level="INFO">Typing text '9gVukRVQ' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:33.399" endtime="20230825 01:36:33.622"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:34.124" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:33.622" endtime="20230825 01:36:34.124"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:33.398" endtime="20230825 01:36:34.125"/>
+</kw>
+<kw name="Enter Confirm Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入確認密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Confirm_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:34.130" level="INFO">Typing text '9gVukRVQ' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:34.127" endtime="20230825 01:36:34.294"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:34.796" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:34.294" endtime="20230825 01:36:34.796"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:34.125" endtime="20230825 01:36:34.796"/>
+</kw>
+<kw name="Enter E-Mail" library="regist_keywords">
+<arg>${Email}</arg>
+<doc>輸入信箱</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:34.799" level="INFO">Typing text 'Washington2436@gmail.com' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:34.798" endtime="20230825 01:36:35.076"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:35.578" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:35.076" endtime="20230825 01:36:35.578"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:34.797" endtime="20230825 01:36:35.578"/>
+</kw>
+<kw name="Enter Contact No" library="regist_keywords">
+<arg>${ContactNo}</arg>
+<doc>輸入連絡電話</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Contact_No}</arg>
+<arg>${ContactNo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:35.581" level="INFO">Typing text '(001)3491065' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:35.580" endtime="20230825 01:36:35.800"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:36.300" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:35.800" endtime="20230825 01:36:36.300"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:35.579" endtime="20230825 01:36:36.300"/>
+</kw>
+<kw name="Enter Additional Info" library="regist_keywords">
+<arg>${AdditionalInfo}</arg>
+<doc>輸入額外資訊</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Additional_Info}</arg>
+<arg>${AdditionalInfo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:36.303" level="INFO">Typing text 'Be not forward, but friendly and courteous; the first to salute, hear and answer; and be not pensive when it is time to converse.' into text field 'xpath://textarea[@id='exampleFormControlTextarea1']'.</msg>
+<status status="PASS" starttime="20230825 01:36:36.302" endtime="20230825 01:36:36.707"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:37.208" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:36.707" endtime="20230825 01:36:37.208"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:36.301" endtime="20230825 01:36:37.208"/>
+</kw>
+<kw name="Press Submit" library="regist_keywords">
+<doc>點擊註冊按鈕</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:37.211" level="INFO">Clicking button 'xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:37.210" endtime="20230825 01:36:37.343"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:37.845" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:37.343" endtime="20230825 01:36:37.845"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:37.209" endtime="20230825 01:36:37.845"/>
+</kw>
+<kw name="Verify Successful Registion" library="regist_keywords">
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Department}</arg>
+<arg>${Email}</arg>
+<arg>${ContactNo}</arg>
+<doc>驗證註冊成功,先將網頁捲動置尾端,驗證出現註冊成功訊息,並且網頁尾端表格出現姓名,任職單位,信箱,連絡電話等對應註冊訊息</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:36:37.849" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:36:37.847" endtime="20230825 01:36:37.868"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:37.903" level="INFO">Current page contains text 'Success!.'.</msg>
+<status status="PASS" starttime="20230825 01:36:37.869" endtime="20230825 01:36:37.903"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${FirstName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:37.933" level="INFO">Current page contains text 'George'.</msg>
+<status status="PASS" starttime="20230825 01:36:37.904" endtime="20230825 01:36:37.933"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LastName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:37.961" level="INFO">Current page contains text 'Washington'.</msg>
+<status status="PASS" starttime="20230825 01:36:37.934" endtime="20230825 01:36:37.961"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Department}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:37.980" level="INFO">Current page contains text 'Tresurer's Office'.</msg>
+<status status="PASS" starttime="20230825 01:36:37.961" endtime="20230825 01:36:37.980"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:37.996" level="INFO">Current page contains text 'Washington2436@gmail.com'.</msg>
+<status status="PASS" starttime="20230825 01:36:37.980" endtime="20230825 01:36:37.996"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ContactNo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:38.011" level="INFO">Current page contains text '(001)3491065'.</msg>
+<status status="PASS" starttime="20230825 01:36:37.996" endtime="20230825 01:36:38.011"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:41.011" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:36:38.011" endtime="20230825 01:36:41.011"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:37.845" endtime="20230825 01:36:41.011"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:29.303" endtime="20230825 01:36:41.011"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:29.298" endtime="20230825 01:36:41.012"/>
+</test>
+<test id="s1-t5" name="RegistTestWithExcel" line="16">
+<kw name="RegistTest">
+<arg>Benjamin</arg>
+<arg>Franklin</arg>
+<arg>Male</arg>
+<arg>Jogging</arg>
+<arg>MPDC</arg>
+<arg>Franklin1479</arg>
+<arg>4K4Yk7u5</arg>
+<arg>Franklin1479@gmail.com</arg>
+<arg>(001)7186210</arg>
+<arg>Do not fear mistakes. You will know failure. Continue to reach out.</arg>
+<doc>進行網頁註冊功能驗證,包含填寫姓名,性別,嗜好,任職單位,帳號,密碼,連絡電話,備註訊息,最後驗證註冊訊息是否出現在網頁尾端</doc>
+<kw name="Enter First Name" library="regist_keywords">
+<arg>${FirstName}</arg>
+<doc>輸入名子</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_First_Name}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:41.021" level="INFO">Typing text 'Benjamin' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:41.020" endtime="20230825 01:36:41.244"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:41.746" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:41.245" endtime="20230825 01:36:41.746"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:41.019" endtime="20230825 01:36:41.746"/>
+</kw>
+<kw name="Enter Last Name" library="regist_keywords">
+<arg>${LastName}</arg>
+<doc>輸入姓氏</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Last_Name}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:41.749" level="INFO">Typing text 'Franklin' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:41.748" endtime="20230825 01:36:41.987"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:42.489" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:41.987" endtime="20230825 01:36:42.489"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:41.746" endtime="20230825 01:36:42.489"/>
+</kw>
+<kw name="Select Gender" library="regist_keywords">
+<arg>${Gender}</arg>
+<doc>選擇性別(單選紐)</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_button_Gender}</arg>
+<arg>${Gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:36:42.491" level="INFO">Selecting 'Male' from radio button 'inlineRadioOptions'.</msg>
+<status status="PASS" starttime="20230825 01:36:42.491" endtime="20230825 01:36:42.591"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:43.091" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:42.591" endtime="20230825 01:36:43.091"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:42.490" endtime="20230825 01:36:43.091"/>
+</kw>
+<kw name="Select Hobby" library="regist_keywords">
+<arg>${Hobby}</arg>
+<doc>選擇興趣(列表框)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${list_box_Hobbies}</arg>
+<arg>${Hobby}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:43.094" level="INFO">Selecting options from selection list 'id:exampleFormControlSelect2' by label Jogging.</msg>
+<status status="PASS" starttime="20230825 01:36:43.093" endtime="20230825 01:36:43.221"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:43.722" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:43.221" endtime="20230825 01:36:43.722"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:43.092" endtime="20230825 01:36:43.722"/>
+</kw>
+<kw name="Select Department / Office" library="regist_keywords">
+<arg>${Department}</arg>
+<doc>選擇興趣(下拉式選單)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drop_down_Department_Office}</arg>
+<arg>${Department}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:43.725" level="INFO">Selecting options from selection list 'name:department' by label MPDC.</msg>
+<status status="PASS" starttime="20230825 01:36:43.724" endtime="20230825 01:36:43.902"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:44.403" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:43.903" endtime="20230825 01:36:44.403"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:43.723" endtime="20230825 01:36:44.404"/>
+</kw>
+<kw name="Enter Username" library="regist_keywords">
+<arg>${Username}</arg>
+<doc>輸入帳號</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:44.406" level="INFO">Typing text 'Franklin1479' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:44.405" endtime="20230825 01:36:44.636"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:45.137" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:44.636" endtime="20230825 01:36:45.137"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:44.404" endtime="20230825 01:36:45.137"/>
+</kw>
+<kw name="Enter Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:45.140" level="INFO">Typing text '4K4Yk7u5' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:45.139" endtime="20230825 01:36:45.365"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:45.867" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:45.365" endtime="20230825 01:36:45.867"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:45.138" endtime="20230825 01:36:45.867"/>
+</kw>
+<kw name="Enter Confirm Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入確認密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Confirm_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:45.870" level="INFO">Typing text '4K4Yk7u5' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:45.869" endtime="20230825 01:36:46.043"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:46.545" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:46.043" endtime="20230825 01:36:46.545"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:45.868" endtime="20230825 01:36:46.545"/>
+</kw>
+<kw name="Enter E-Mail" library="regist_keywords">
+<arg>${Email}</arg>
+<doc>輸入信箱</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:46.547" level="INFO">Typing text 'Franklin1479@gmail.com' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:46.546" endtime="20230825 01:36:46.821"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:47.322" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:46.821" endtime="20230825 01:36:47.322"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:46.545" endtime="20230825 01:36:47.322"/>
+</kw>
+<kw name="Enter Contact No" library="regist_keywords">
+<arg>${ContactNo}</arg>
+<doc>輸入連絡電話</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Contact_No}</arg>
+<arg>${ContactNo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:47.324" level="INFO">Typing text '(001)7186210' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:47.323" endtime="20230825 01:36:47.553"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:48.053" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:47.553" endtime="20230825 01:36:48.053"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:47.322" endtime="20230825 01:36:48.053"/>
+</kw>
+<kw name="Enter Additional Info" library="regist_keywords">
+<arg>${AdditionalInfo}</arg>
+<doc>輸入額外資訊</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Additional_Info}</arg>
+<arg>${AdditionalInfo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:48.057" level="INFO">Typing text 'Do not fear mistakes. You will know failure. Continue to reach out.' into text field 'xpath://textarea[@id='exampleFormControlTextarea1']'.</msg>
+<status status="PASS" starttime="20230825 01:36:48.055" endtime="20230825 01:36:48.358"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:48.859" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:48.358" endtime="20230825 01:36:48.859"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:48.054" endtime="20230825 01:36:48.859"/>
+</kw>
+<kw name="Press Submit" library="regist_keywords">
+<doc>點擊註冊按鈕</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:48.860" level="INFO">Clicking button 'xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:48.859" endtime="20230825 01:36:48.973"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:49.474" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:48.973" endtime="20230825 01:36:49.474"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:48.859" endtime="20230825 01:36:49.474"/>
+</kw>
+<kw name="Verify Successful Registion" library="regist_keywords">
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Department}</arg>
+<arg>${Email}</arg>
+<arg>${ContactNo}</arg>
+<doc>驗證註冊成功,先將網頁捲動置尾端,驗證出現註冊成功訊息,並且網頁尾端表格出現姓名,任職單位,信箱,連絡電話等對應註冊訊息</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:36:49.478" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:36:49.476" endtime="20230825 01:36:49.498"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:49.538" level="INFO">Current page contains text 'Success!.'.</msg>
+<status status="PASS" starttime="20230825 01:36:49.499" endtime="20230825 01:36:49.538"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${FirstName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:49.570" level="INFO">Current page contains text 'Benjamin'.</msg>
+<status status="PASS" starttime="20230825 01:36:49.538" endtime="20230825 01:36:49.570"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LastName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:49.602" level="INFO">Current page contains text 'Franklin'.</msg>
+<status status="PASS" starttime="20230825 01:36:49.570" endtime="20230825 01:36:49.602"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Department}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:49.632" level="INFO">Current page contains text 'MPDC'.</msg>
+<status status="PASS" starttime="20230825 01:36:49.602" endtime="20230825 01:36:49.632"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:49.651" level="INFO">Current page contains text 'Franklin1479@gmail.com'.</msg>
+<status status="PASS" starttime="20230825 01:36:49.632" endtime="20230825 01:36:49.651"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ContactNo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:36:49.670" level="INFO">Current page contains text '(001)7186210'.</msg>
+<status status="PASS" starttime="20230825 01:36:49.651" endtime="20230825 01:36:49.670"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:52.671" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:36:49.671" endtime="20230825 01:36:52.671"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:49.475" endtime="20230825 01:36:52.671"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:41.017" endtime="20230825 01:36:52.671"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:41.013" endtime="20230825 01:36:52.671"/>
+</test>
+<test id="s1-t6" name="RegistTestWithExcel" line="16">
+<kw name="RegistTest">
+<arg>George</arg>
+<arg>Bush</arg>
+<arg>Male</arg>
+<arg>Reading</arg>
+<arg>MCTC</arg>
+<arg>Bush1765</arg>
+<arg>YWkFrZW6</arg>
+<arg>Bush1765@gmail.com</arg>
+<arg>(001)1829105</arg>
+<arg>Ceiling and Visibility Unlimited.</arg>
+<doc>進行網頁註冊功能驗證,包含填寫姓名,性別,嗜好,任職單位,帳號,密碼,連絡電話,備註訊息,最後驗證註冊訊息是否出現在網頁尾端</doc>
+<kw name="Enter First Name" library="regist_keywords">
+<arg>${FirstName}</arg>
+<doc>輸入名子</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_First_Name}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:52.677" level="INFO">Typing text 'George' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:52.676" endtime="20230825 01:36:52.793"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:53.294" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:52.793" endtime="20230825 01:36:53.294"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:52.676" endtime="20230825 01:36:53.294"/>
+</kw>
+<kw name="Enter Last Name" library="regist_keywords">
+<arg>${LastName}</arg>
+<doc>輸入姓氏</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Last_Name}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:53.294" level="INFO">Typing text 'Bush' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:53.294" endtime="20230825 01:36:53.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:53.904" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:53.403" endtime="20230825 01:36:53.904"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:53.294" endtime="20230825 01:36:53.904"/>
+</kw>
+<kw name="Select Gender" library="regist_keywords">
+<arg>${Gender}</arg>
+<doc>選擇性別(單選紐)</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_button_Gender}</arg>
+<arg>${Gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:36:53.907" level="INFO">Selecting 'Male' from radio button 'inlineRadioOptions'.</msg>
+<status status="PASS" starttime="20230825 01:36:53.905" endtime="20230825 01:36:54.016"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:54.517" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:54.016" endtime="20230825 01:36:54.517"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:53.904" endtime="20230825 01:36:54.517"/>
+</kw>
+<kw name="Select Hobby" library="regist_keywords">
+<arg>${Hobby}</arg>
+<doc>選擇興趣(列表框)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${list_box_Hobbies}</arg>
+<arg>${Hobby}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:54.518" level="INFO">Selecting options from selection list 'id:exampleFormControlSelect2' by label Reading.</msg>
+<status status="PASS" starttime="20230825 01:36:54.517" endtime="20230825 01:36:54.591"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:55.091" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:54.591" endtime="20230825 01:36:55.091"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:54.517" endtime="20230825 01:36:55.091"/>
+</kw>
+<kw name="Select Department / Office" library="regist_keywords">
+<arg>${Department}</arg>
+<doc>選擇興趣(下拉式選單)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drop_down_Department_Office}</arg>
+<arg>${Department}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:36:55.093" level="INFO">Selecting options from selection list 'name:department' by label MCTC.</msg>
+<status status="PASS" starttime="20230825 01:36:55.092" endtime="20230825 01:36:55.191"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:55.692" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:55.191" endtime="20230825 01:36:55.692"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:55.091" endtime="20230825 01:36:55.692"/>
+</kw>
+<kw name="Enter Username" library="regist_keywords">
+<arg>${Username}</arg>
+<doc>輸入帳號</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:55.696" level="INFO">Typing text 'Bush1765' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:55.694" endtime="20230825 01:36:55.886"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:56.387" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:55.886" endtime="20230825 01:36:56.387"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:55.693" endtime="20230825 01:36:56.387"/>
+</kw>
+<kw name="Enter Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:56.390" level="INFO">Typing text 'YWkFrZW6' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:56.389" endtime="20230825 01:36:56.591"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:57.092" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:56.591" endtime="20230825 01:36:57.092"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:56.388" endtime="20230825 01:36:57.092"/>
+</kw>
+<kw name="Enter Confirm Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入確認密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Confirm_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:57.093" level="INFO">Typing text 'YWkFrZW6' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:57.092" endtime="20230825 01:36:57.205"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:57.705" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:57.205" endtime="20230825 01:36:57.705"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:57.092" endtime="20230825 01:36:57.705"/>
+</kw>
+<kw name="Enter E-Mail" library="regist_keywords">
+<arg>${Email}</arg>
+<doc>輸入信箱</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:57.708" level="INFO">Typing text 'Bush1765@gmail.com' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:57.707" endtime="20230825 01:36:57.966"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:58.467" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:57.966" endtime="20230825 01:36:58.467"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:57.706" endtime="20230825 01:36:58.467"/>
+</kw>
+<kw name="Enter Contact No" library="regist_keywords">
+<arg>${ContactNo}</arg>
+<doc>輸入連絡電話</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Contact_No}</arg>
+<arg>${ContactNo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:58.470" level="INFO">Typing text '(001)1829105' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:58.469" endtime="20230825 01:36:58.675"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:59.175" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:58.675" endtime="20230825 01:36:59.175"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:58.468" endtime="20230825 01:36:59.175"/>
+</kw>
+<kw name="Enter Additional Info" library="regist_keywords">
+<arg>${AdditionalInfo}</arg>
+<doc>輸入額外資訊</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Additional_Info}</arg>
+<arg>${AdditionalInfo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:59.178" level="INFO">Typing text 'Ceiling and Visibility Unlimited.' into text field 'xpath://textarea[@id='exampleFormControlTextarea1']'.</msg>
+<status status="PASS" starttime="20230825 01:36:59.177" endtime="20230825 01:36:59.374"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:36:59.875" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:59.374" endtime="20230825 01:36:59.875"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:59.176" endtime="20230825 01:36:59.876"/>
+</kw>
+<kw name="Press Submit" library="regist_keywords">
+<doc>點擊註冊按鈕</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:36:59.879" level="INFO">Clicking button 'xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230825 01:36:59.877" endtime="20230825 01:36:59.965"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:00.465" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:36:59.965" endtime="20230825 01:37:00.465"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:59.876" endtime="20230825 01:37:00.465"/>
+</kw>
+<kw name="Verify Successful Registion" library="regist_keywords">
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Department}</arg>
+<arg>${Email}</arg>
+<arg>${ContactNo}</arg>
+<doc>驗證註冊成功,先將網頁捲動置尾端,驗證出現註冊成功訊息,並且網頁尾端表格出現姓名,任職單位,信箱,連絡電話等對應註冊訊息</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:37:00.469" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:37:00.467" endtime="20230825 01:37:00.489"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:00.529" level="INFO">Current page contains text 'Success!.'.</msg>
+<status status="PASS" starttime="20230825 01:37:00.489" endtime="20230825 01:37:00.529"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${FirstName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:00.560" level="INFO">Current page contains text 'George'.</msg>
+<status status="PASS" starttime="20230825 01:37:00.530" endtime="20230825 01:37:00.560"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LastName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:00.585" level="INFO">Current page contains text 'Bush'.</msg>
+<status status="PASS" starttime="20230825 01:37:00.560" endtime="20230825 01:37:00.586"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Department}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:00.606" level="INFO">Current page contains text 'MCTC'.</msg>
+<status status="PASS" starttime="20230825 01:37:00.586" endtime="20230825 01:37:00.606"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:00.622" level="INFO">Current page contains text 'Bush1765@gmail.com'.</msg>
+<status status="PASS" starttime="20230825 01:37:00.606" endtime="20230825 01:37:00.622"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ContactNo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:00.638" level="INFO">Current page contains text '(001)1829105'.</msg>
+<status status="PASS" starttime="20230825 01:37:00.622" endtime="20230825 01:37:00.638"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:03.638" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:37:00.638" endtime="20230825 01:37:03.638"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:00.466" endtime="20230825 01:37:03.638"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:52.675" endtime="20230825 01:37:03.639"/>
+</kw>
+<status status="PASS" starttime="20230825 01:36:52.672" endtime="20230825 01:37:03.639"/>
+</test>
+<test id="s1-t7" name="RegistTestWithExcel" line="16">
+<kw name="RegistTest">
+<arg>Bill</arg>
+<arg>Clinton</arg>
+<arg>Male</arg>
+<arg>Jogging</arg>
+<arg>MCR</arg>
+<arg>Clinton6231</arg>
+<arg>HGWpHTWx</arg>
+<arg>Clinton6231@gmail.com</arg>
+<arg>(001)1361047</arg>
+<arg>We live to prove that cooperation works better than conflict.</arg>
+<doc>進行網頁註冊功能驗證,包含填寫姓名,性別,嗜好,任職單位,帳號,密碼,連絡電話,備註訊息,最後驗證註冊訊息是否出現在網頁尾端</doc>
+<kw name="Enter First Name" library="regist_keywords">
+<arg>${FirstName}</arg>
+<doc>輸入名子</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_First_Name}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:03.648" level="INFO">Typing text 'Bill' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:03.647" endtime="20230825 01:37:03.839"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:04.340" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:03.839" endtime="20230825 01:37:04.340"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:03.646" endtime="20230825 01:37:04.340"/>
+</kw>
+<kw name="Enter Last Name" library="regist_keywords">
+<arg>${LastName}</arg>
+<doc>輸入姓氏</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Last_Name}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:04.343" level="INFO">Typing text 'Clinton' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:04.342" endtime="20230825 01:37:04.508"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:05.008" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:04.508" endtime="20230825 01:37:05.008"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:04.341" endtime="20230825 01:37:05.008"/>
+</kw>
+<kw name="Select Gender" library="regist_keywords">
+<arg>${Gender}</arg>
+<doc>選擇性別(單選紐)</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_button_Gender}</arg>
+<arg>${Gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:37:05.010" level="INFO">Selecting 'Male' from radio button 'inlineRadioOptions'.</msg>
+<status status="PASS" starttime="20230825 01:37:05.010" endtime="20230825 01:37:05.147"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:05.647" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:05.147" endtime="20230825 01:37:05.647"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:05.009" endtime="20230825 01:37:05.647"/>
+</kw>
+<kw name="Select Hobby" library="regist_keywords">
+<arg>${Hobby}</arg>
+<doc>選擇興趣(列表框)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${list_box_Hobbies}</arg>
+<arg>${Hobby}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:37:05.651" level="INFO">Selecting options from selection list 'id:exampleFormControlSelect2' by label Jogging.</msg>
+<status status="PASS" starttime="20230825 01:37:05.649" endtime="20230825 01:37:05.797"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:06.298" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:05.797" endtime="20230825 01:37:06.298"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:05.647" endtime="20230825 01:37:06.299"/>
+</kw>
+<kw name="Select Department / Office" library="regist_keywords">
+<arg>${Department}</arg>
+<doc>選擇興趣(下拉式選單)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drop_down_Department_Office}</arg>
+<arg>${Department}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:37:06.301" level="INFO">Selecting options from selection list 'name:department' by label MCR.</msg>
+<status status="PASS" starttime="20230825 01:37:06.300" endtime="20230825 01:37:06.442"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:06.942" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:06.442" endtime="20230825 01:37:06.942"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:06.299" endtime="20230825 01:37:06.942"/>
+</kw>
+<kw name="Enter Username" library="regist_keywords">
+<arg>${Username}</arg>
+<doc>輸入帳號</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:06.945" level="INFO">Typing text 'Clinton6231' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:06.944" endtime="20230825 01:37:07.102"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:07.604" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:07.102" endtime="20230825 01:37:07.604"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:06.943" endtime="20230825 01:37:07.604"/>
+</kw>
+<kw name="Enter Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:07.605" level="INFO">Typing text 'HGWpHTWx' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:07.604" endtime="20230825 01:37:07.752"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:08.252" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:07.752" endtime="20230825 01:37:08.252"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:07.604" endtime="20230825 01:37:08.252"/>
+</kw>
+<kw name="Enter Confirm Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入確認密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Confirm_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:08.255" level="INFO">Typing text 'HGWpHTWx' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:08.254" endtime="20230825 01:37:08.457"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:08.959" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:08.458" endtime="20230825 01:37:08.959"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:08.253" endtime="20230825 01:37:08.959"/>
+</kw>
+<kw name="Enter E-Mail" library="regist_keywords">
+<arg>${Email}</arg>
+<doc>輸入信箱</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:08.962" level="INFO">Typing text 'Clinton6231@gmail.com' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:08.960" endtime="20230825 01:37:09.208"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:09.710" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:09.208" endtime="20230825 01:37:09.710"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:08.959" endtime="20230825 01:37:09.710"/>
+</kw>
+<kw name="Enter Contact No" library="regist_keywords">
+<arg>${ContactNo}</arg>
+<doc>輸入連絡電話</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Contact_No}</arg>
+<arg>${ContactNo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:09.712" level="INFO">Typing text '(001)1361047' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:09.711" endtime="20230825 01:37:09.903"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:10.403" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:09.903" endtime="20230825 01:37:10.403"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:09.710" endtime="20230825 01:37:10.403"/>
+</kw>
+<kw name="Enter Additional Info" library="regist_keywords">
+<arg>${AdditionalInfo}</arg>
+<doc>輸入額外資訊</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Additional_Info}</arg>
+<arg>${AdditionalInfo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:10.406" level="INFO">Typing text 'We live to prove that cooperation works better than conflict.' into text field 'xpath://textarea[@id='exampleFormControlTextarea1']'.</msg>
+<status status="PASS" starttime="20230825 01:37:10.405" endtime="20230825 01:37:10.618"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:11.119" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:10.619" endtime="20230825 01:37:11.119"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:10.404" endtime="20230825 01:37:11.120"/>
+</kw>
+<kw name="Press Submit" library="regist_keywords">
+<doc>點擊註冊按鈕</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:11.122" level="INFO">Clicking button 'xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:11.121" endtime="20230825 01:37:11.276"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:11.776" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:11.276" endtime="20230825 01:37:11.776"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:11.120" endtime="20230825 01:37:11.776"/>
+</kw>
+<kw name="Verify Successful Registion" library="regist_keywords">
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Department}</arg>
+<arg>${Email}</arg>
+<arg>${ContactNo}</arg>
+<doc>驗證註冊成功,先將網頁捲動置尾端,驗證出現註冊成功訊息,並且網頁尾端表格出現姓名,任職單位,信箱,連絡電話等對應註冊訊息</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:37:11.780" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:37:11.778" endtime="20230825 01:37:11.798"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:11.839" level="INFO">Current page contains text 'Success!.'.</msg>
+<status status="PASS" starttime="20230825 01:37:11.798" endtime="20230825 01:37:11.839"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${FirstName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:11.879" level="INFO">Current page contains text 'Bill'.</msg>
+<status status="PASS" starttime="20230825 01:37:11.840" endtime="20230825 01:37:11.880"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LastName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:11.905" level="INFO">Current page contains text 'Clinton'.</msg>
+<status status="PASS" starttime="20230825 01:37:11.880" endtime="20230825 01:37:11.905"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Department}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:11.928" level="INFO">Current page contains text 'MCR'.</msg>
+<status status="PASS" starttime="20230825 01:37:11.905" endtime="20230825 01:37:11.929"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:11.951" level="INFO">Current page contains text 'Clinton6231@gmail.com'.</msg>
+<status status="PASS" starttime="20230825 01:37:11.929" endtime="20230825 01:37:11.951"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ContactNo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:11.966" level="INFO">Current page contains text '(001)1361047'.</msg>
+<status status="PASS" starttime="20230825 01:37:11.951" endtime="20230825 01:37:11.966"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:14.967" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:37:11.966" endtime="20230825 01:37:14.967"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:11.776" endtime="20230825 01:37:14.967"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:03.645" endtime="20230825 01:37:14.968"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:03.640" endtime="20230825 01:37:14.968"/>
+</test>
+<test id="s1-t8" name="RegistTestWithExcel" line="16">
+<kw name="RegistTest">
+<arg>Elvis</arg>
+<arg>Presley</arg>
+<arg>Male</arg>
+<arg>Singing</arg>
+<arg>Mayor's Office</arg>
+<arg>Presley2536</arg>
+<arg>KNqf49tU</arg>
+<arg>Presley2536@gmail.com</arg>
+<arg>(001)4510291</arg>
+<arg>Values are like fingerprints. Nobody's are the same, but you leave 'em all over everything you do.</arg>
+<doc>進行網頁註冊功能驗證,包含填寫姓名,性別,嗜好,任職單位,帳號,密碼,連絡電話,備註訊息,最後驗證註冊訊息是否出現在網頁尾端</doc>
+<kw name="Enter First Name" library="regist_keywords">
+<arg>${FirstName}</arg>
+<doc>輸入名子</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_First_Name}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:14.978" level="INFO">Typing text 'Elvis' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:14.976" endtime="20230825 01:37:15.164"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:15.666" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:15.164" endtime="20230825 01:37:15.666"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:14.975" endtime="20230825 01:37:15.666"/>
+</kw>
+<kw name="Enter Last Name" library="regist_keywords">
+<arg>${LastName}</arg>
+<doc>輸入姓氏</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Last_Name}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:15.669" level="INFO">Typing text 'Presley' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:15.668" endtime="20230825 01:37:15.830"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:16.332" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:15.830" endtime="20230825 01:37:16.332"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:15.667" endtime="20230825 01:37:16.332"/>
+</kw>
+<kw name="Select Gender" library="regist_keywords">
+<arg>${Gender}</arg>
+<doc>選擇性別(單選紐)</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_button_Gender}</arg>
+<arg>${Gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:37:16.334" level="INFO">Selecting 'Male' from radio button 'inlineRadioOptions'.</msg>
+<status status="PASS" starttime="20230825 01:37:16.334" endtime="20230825 01:37:16.481"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:16.982" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:16.482" endtime="20230825 01:37:16.982"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:16.333" endtime="20230825 01:37:16.982"/>
+</kw>
+<kw name="Select Hobby" library="regist_keywords">
+<arg>${Hobby}</arg>
+<doc>選擇興趣(列表框)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${list_box_Hobbies}</arg>
+<arg>${Hobby}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:37:16.985" level="INFO">Selecting options from selection list 'id:exampleFormControlSelect2' by label Singing.</msg>
+<status status="PASS" starttime="20230825 01:37:16.984" endtime="20230825 01:37:17.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:17.647" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:17.147" endtime="20230825 01:37:17.647"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:16.982" endtime="20230825 01:37:17.647"/>
+</kw>
+<kw name="Select Department / Office" library="regist_keywords">
+<arg>${Department}</arg>
+<doc>選擇興趣(下拉式選單)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drop_down_Department_Office}</arg>
+<arg>${Department}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:37:17.650" level="INFO">Selecting options from selection list 'name:department' by label Mayor's Office.</msg>
+<status status="PASS" starttime="20230825 01:37:17.649" endtime="20230825 01:37:17.765"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:18.266" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:17.765" endtime="20230825 01:37:18.266"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:17.647" endtime="20230825 01:37:18.266"/>
+</kw>
+<kw name="Enter Username" library="regist_keywords">
+<arg>${Username}</arg>
+<doc>輸入帳號</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:18.268" level="INFO">Typing text 'Presley2536' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:18.267" endtime="20230825 01:37:18.431"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:18.932" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:18.431" endtime="20230825 01:37:18.932"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:18.267" endtime="20230825 01:37:18.932"/>
+</kw>
+<kw name="Enter Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:18.932" level="INFO">Typing text 'KNqf49tU' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:18.932" endtime="20230825 01:37:19.074"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:19.576" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:19.074" endtime="20230825 01:37:19.576"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:18.932" endtime="20230825 01:37:19.576"/>
+</kw>
+<kw name="Enter Confirm Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入確認密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Confirm_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:19.579" level="INFO">Typing text 'KNqf49tU' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:19.578" endtime="20230825 01:37:19.785"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:20.286" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:19.785" endtime="20230825 01:37:20.286"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:19.577" endtime="20230825 01:37:20.286"/>
+</kw>
+<kw name="Enter E-Mail" library="regist_keywords">
+<arg>${Email}</arg>
+<doc>輸入信箱</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:20.289" level="INFO">Typing text 'Presley2536@gmail.com' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:20.288" endtime="20230825 01:37:20.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:21.026" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:20.525" endtime="20230825 01:37:21.026"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:20.287" endtime="20230825 01:37:21.026"/>
+</kw>
+<kw name="Enter Contact No" library="regist_keywords">
+<arg>${ContactNo}</arg>
+<doc>輸入連絡電話</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Contact_No}</arg>
+<arg>${ContactNo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:21.029" level="INFO">Typing text '(001)4510291' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:21.028" endtime="20230825 01:37:21.180"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:21.681" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:21.180" endtime="20230825 01:37:21.681"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:21.027" endtime="20230825 01:37:21.681"/>
+</kw>
+<kw name="Enter Additional Info" library="regist_keywords">
+<arg>${AdditionalInfo}</arg>
+<doc>輸入額外資訊</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Additional_Info}</arg>
+<arg>${AdditionalInfo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:21.684" level="INFO">Typing text 'Values are like fingerprints. Nobody's are the same, but you leave 'em all over everything you do.' into text field 'xpath://textarea[@id='exampleFormControlTextarea1']'.</msg>
+<status status="PASS" starttime="20230825 01:37:21.683" endtime="20230825 01:37:22.056"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:22.558" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:22.056" endtime="20230825 01:37:22.558"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:21.681" endtime="20230825 01:37:22.558"/>
+</kw>
+<kw name="Press Submit" library="regist_keywords">
+<doc>點擊註冊按鈕</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:22.561" level="INFO">Clicking button 'xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:22.560" endtime="20230825 01:37:22.698"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:23.199" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:22.698" endtime="20230825 01:37:23.199"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:22.559" endtime="20230825 01:37:23.199"/>
+</kw>
+<kw name="Verify Successful Registion" library="regist_keywords">
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Department}</arg>
+<arg>${Email}</arg>
+<arg>${ContactNo}</arg>
+<doc>驗證註冊成功,先將網頁捲動置尾端,驗證出現註冊成功訊息,並且網頁尾端表格出現姓名,任職單位,信箱,連絡電話等對應註冊訊息</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:37:23.203" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:37:23.201" endtime="20230825 01:37:23.224"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:23.263" level="INFO">Current page contains text 'Success!.'.</msg>
+<status status="PASS" starttime="20230825 01:37:23.224" endtime="20230825 01:37:23.264"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${FirstName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:23.305" level="INFO">Current page contains text 'Elvis'.</msg>
+<status status="PASS" starttime="20230825 01:37:23.264" endtime="20230825 01:37:23.305"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LastName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:23.338" level="INFO">Current page contains text 'Presley'.</msg>
+<status status="PASS" starttime="20230825 01:37:23.306" endtime="20230825 01:37:23.338"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Department}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:23.374" level="INFO">Current page contains text 'Mayor's Office'.</msg>
+<status status="PASS" starttime="20230825 01:37:23.339" endtime="20230825 01:37:23.374"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:23.396" level="INFO">Current page contains text 'Presley2536@gmail.com'.</msg>
+<status status="PASS" starttime="20230825 01:37:23.374" endtime="20230825 01:37:23.396"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ContactNo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:23.419" level="INFO">Current page contains text '(001)4510291'.</msg>
+<status status="PASS" starttime="20230825 01:37:23.397" endtime="20230825 01:37:23.419"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:26.420" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:37:23.419" endtime="20230825 01:37:26.420"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:23.200" endtime="20230825 01:37:26.420"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:14.974" endtime="20230825 01:37:26.420"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:14.969" endtime="20230825 01:37:26.421"/>
+</test>
+<test id="s1-t9" name="RegistTestWithExcel" line="16">
+<kw name="RegistTest">
+<arg>Oprah</arg>
+<arg>Winfrey</arg>
+<arg>Female</arg>
+<arg>Running</arg>
+<arg>Tourism Office</arg>
+<arg>Winfrey9462</arg>
+<arg>HGhWx9rE</arg>
+<arg>Winfrey9462@gmail.com</arg>
+<arg>(001)2617453</arg>
+<arg>You can have it all. Just not all at once.</arg>
+<doc>進行網頁註冊功能驗證,包含填寫姓名,性別,嗜好,任職單位,帳號,密碼,連絡電話,備註訊息,最後驗證註冊訊息是否出現在網頁尾端</doc>
+<kw name="Enter First Name" library="regist_keywords">
+<arg>${FirstName}</arg>
+<doc>輸入名子</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_First_Name}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:26.430" level="INFO">Typing text 'Oprah' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:26.429" endtime="20230825 01:37:26.600"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:27.101" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:26.600" endtime="20230825 01:37:27.101"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:26.428" endtime="20230825 01:37:27.101"/>
+</kw>
+<kw name="Enter Last Name" library="regist_keywords">
+<arg>${LastName}</arg>
+<doc>輸入姓氏</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Last_Name}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:27.104" level="INFO">Typing text 'Winfrey' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[2]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:27.103" endtime="20230825 01:37:27.291"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:27.793" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:27.291" endtime="20230825 01:37:27.793"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:27.102" endtime="20230825 01:37:27.793"/>
+</kw>
+<kw name="Select Gender" library="regist_keywords">
+<arg>${Gender}</arg>
+<doc>選擇性別(單選紐)</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_button_Gender}</arg>
+<arg>${Gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 01:37:27.795" level="INFO">Selecting 'Female' from radio button 'inlineRadioOptions'.</msg>
+<status status="PASS" starttime="20230825 01:37:27.794" endtime="20230825 01:37:27.924"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:28.424" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:27.924" endtime="20230825 01:37:28.424"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:27.793" endtime="20230825 01:37:28.425"/>
+</kw>
+<kw name="Select Hobby" library="regist_keywords">
+<arg>${Hobby}</arg>
+<doc>選擇興趣(列表框)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${list_box_Hobbies}</arg>
+<arg>${Hobby}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:37:28.428" level="INFO">Selecting options from selection list 'id:exampleFormControlSelect2' by label Running.</msg>
+<status status="PASS" starttime="20230825 01:37:28.426" endtime="20230825 01:37:28.586"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:29.087" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:28.586" endtime="20230825 01:37:29.087"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:28.425" endtime="20230825 01:37:29.087"/>
+</kw>
+<kw name="Select Department / Office" library="regist_keywords">
+<arg>${Department}</arg>
+<doc>選擇興趣(下拉式選單)</doc>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drop_down_Department_Office}</arg>
+<arg>${Department}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230825 01:37:29.090" level="INFO">Selecting options from selection list 'name:department' by label Tourism Office.</msg>
+<status status="PASS" starttime="20230825 01:37:29.089" endtime="20230825 01:37:29.225"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:29.727" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:29.225" endtime="20230825 01:37:29.727"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:29.088" endtime="20230825 01:37:29.727"/>
+</kw>
+<kw name="Enter Username" library="regist_keywords">
+<arg>${Username}</arg>
+<doc>輸入帳號</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:29.730" level="INFO">Typing text 'Winfrey9462' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[6]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:29.729" endtime="20230825 01:37:29.936"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:30.437" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:29.937" endtime="20230825 01:37:30.437"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:29.728" endtime="20230825 01:37:30.437"/>
+</kw>
+<kw name="Enter Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:30.440" level="INFO">Typing text 'HGhWx9rE' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[7]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:30.439" endtime="20230825 01:37:30.689"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:31.190" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:30.689" endtime="20230825 01:37:31.190"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:30.438" endtime="20230825 01:37:31.190"/>
+</kw>
+<kw name="Enter Confirm Password" library="regist_keywords">
+<arg>${Password}</arg>
+<doc>輸入確認密碼</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Confirm_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:31.193" level="INFO">Typing text 'HGhWx9rE' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[8]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:31.192" endtime="20230825 01:37:31.446"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:31.946" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:31.446" endtime="20230825 01:37:31.946"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:31.191" endtime="20230825 01:37:31.946"/>
+</kw>
+<kw name="Enter E-Mail" library="regist_keywords">
+<arg>${Email}</arg>
+<doc>輸入信箱</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:31.949" level="INFO">Typing text 'Winfrey9462@gmail.com' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[9]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:31.947" endtime="20230825 01:37:32.133"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:32.634" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:32.133" endtime="20230825 01:37:32.634"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:31.946" endtime="20230825 01:37:32.634"/>
+</kw>
+<kw name="Enter Contact No" library="regist_keywords">
+<arg>${ContactNo}</arg>
+<doc>輸入連絡電話</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Contact_No}</arg>
+<arg>${ContactNo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:32.637" level="INFO">Typing text '(001)2617453' into text field 'xpath://body/div[1]/form[1]/fieldset[1]/div[10]/div[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:32.635" endtime="20230825 01:37:32.825"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:33.326" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:32.825" endtime="20230825 01:37:33.326"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:32.634" endtime="20230825 01:37:33.326"/>
+</kw>
+<kw name="Enter Additional Info" library="regist_keywords">
+<arg>${AdditionalInfo}</arg>
+<doc>輸入額外資訊</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Additional_Info}</arg>
+<arg>${AdditionalInfo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:33.327" level="INFO">Typing text 'You can have it all. Just not all at once.' into text field 'xpath://textarea[@id='exampleFormControlTextarea1']'.</msg>
+<status status="PASS" starttime="20230825 01:37:33.326" endtime="20230825 01:37:33.482"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:33.983" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:33.482" endtime="20230825 01:37:33.983"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:33.326" endtime="20230825 01:37:33.983"/>
+</kw>
+<kw name="Press Submit" library="regist_keywords">
+<doc>點擊註冊按鈕</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230825 01:37:33.985" level="INFO">Clicking button 'xpath://body/div[1]/form[1]/fieldset[1]/div[13]/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20230825 01:37:33.984" endtime="20230825 01:37:34.110"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:34.612" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230825 01:37:34.110" endtime="20230825 01:37:34.612"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:33.983" endtime="20230825 01:37:34.612"/>
+</kw>
+<kw name="Verify Successful Registion" library="regist_keywords">
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Department}</arg>
+<arg>${Email}</arg>
+<arg>${ContactNo}</arg>
+<doc>驗證註冊成功,先將網頁捲動置尾端,驗證出現註冊成功訊息,並且網頁尾端表格出現姓名,任職單位,信箱,連絡電話等對應註冊訊息</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:37:34.616" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:37:34.614" endtime="20230825 01:37:34.635"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:34.674" level="INFO">Current page contains text 'Success!.'.</msg>
+<status status="PASS" starttime="20230825 01:37:34.635" endtime="20230825 01:37:34.675"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${FirstName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:34.705" level="INFO">Current page contains text 'Oprah'.</msg>
+<status status="PASS" starttime="20230825 01:37:34.675" endtime="20230825 01:37:34.705"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LastName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:34.731" level="INFO">Current page contains text 'Winfrey'.</msg>
+<status status="PASS" starttime="20230825 01:37:34.705" endtime="20230825 01:37:34.731"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Department}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:34.757" level="INFO">Current page contains text 'Tourism Office'.</msg>
+<status status="PASS" starttime="20230825 01:37:34.731" endtime="20230825 01:37:34.757"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:34.776" level="INFO">Current page contains text 'Winfrey9462@gmail.com'.</msg>
+<status status="PASS" starttime="20230825 01:37:34.757" endtime="20230825 01:37:34.776"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ContactNo}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230825 01:37:34.796" level="INFO">Current page contains text '(001)2617453'.</msg>
+<status status="PASS" starttime="20230825 01:37:34.776" endtime="20230825 01:37:34.796"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:37.796" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:37:34.796" endtime="20230825 01:37:37.796"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:34.612" endtime="20230825 01:37:37.796"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:26.426" endtime="20230825 01:37:37.796"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:26.422" endtime="20230825 01:37:37.797"/>
+</test>
+<kw name="Close my Browser" library="regist_keywords" type="TEARDOWN">
+<doc>關閉瀏覽器</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:37:45.801" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20230825 01:37:37.799" endtime="20230825 01:37:45.801"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230825 01:37:45.801" endtime="20230825 01:37:52.122"/>
+</kw>
+<status status="PASS" starttime="20230825 01:37:37.799" endtime="20230825 01:37:52.122"/>
+</kw>
+<status status="PASS" starttime="20230825 01:35:44.742" endtime="20230825 01:37:52.122"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="RegistTest">RegistTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230825 01:36:06.055" level="WARN">Multiple tests with name 'RegistTestWithExcel' executed in suite 'RegistTest'.</msg>
+<msg timestamp="20230825 01:36:17.694" level="WARN">Multiple tests with name 'RegistTestWithExcel' executed in suite 'RegistTest'.</msg>
+<msg timestamp="20230825 01:36:29.298" level="WARN">Multiple tests with name 'RegistTestWithExcel' executed in suite 'RegistTest'.</msg>
+<msg timestamp="20230825 01:36:41.013" level="WARN">Multiple tests with name 'RegistTestWithExcel' executed in suite 'RegistTest'.</msg>
+<msg timestamp="20230825 01:36:52.672" level="WARN">Multiple tests with name 'RegistTestWithExcel' executed in suite 'RegistTest'.</msg>
+<msg timestamp="20230825 01:37:03.640" level="WARN">Multiple tests with name 'RegistTestWithExcel' executed in suite 'RegistTest'.</msg>
+<msg timestamp="20230825 01:37:14.969" level="WARN">Multiple tests with name 'RegistTestWithExcel' executed in suite 'RegistTest'.</msg>
+<msg timestamp="20230825 01:37:26.422" level="WARN">Multiple tests with name 'RegistTestWithExcel' executed in suite 'RegistTest'.</msg>
+</errors>
+</robot>

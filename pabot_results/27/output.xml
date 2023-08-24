@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230824 06:24:32.346" rpa="false" schemaversion="4">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Userkeywords" source="C:\Users\user\PycharmProjects\automation\TestCase\Userkeywords.robot">
+<test id="s1-s1-t1" name="TC1" line="12">
+<kw name="lauchBrowser" library="resources">
+<var>${PageTitle}</var>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${appbrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230824 06:24:32.577" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20230824 06:24:32.576" endtime="20230824 06:24:38.197"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230824 06:24:38.198" endtime="20230824 06:24:38.322"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230824 06:24:38.330" level="INFO">${title} = nopCommerce demo store</msg>
+<status status="PASS" starttime="20230824 06:24:38.322" endtime="20230824 06:24:38.330"/>
+</kw>
+<msg timestamp="20230824 06:24:38.331" level="INFO">${PageTitle} = nopCommerce demo store</msg>
+<status status="PASS" starttime="20230824 06:24:32.575" endtime="20230824 06:24:38.331"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PageTitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230824 06:24:38.331" endtime="20230824 06:24:38.331"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${PageTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230824 06:24:38.332" level="INFO">nopCommerce demo store</msg>
+<status status="PASS" starttime="20230824 06:24:38.331" endtime="20230824 06:24:38.332"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log in')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230824 06:24:38.332" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<status status="PASS" starttime="20230824 06:24:38.332" endtime="20230824 06:24:39.183"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230824 06:24:39.185" level="INFO">Typing text 'kcem104@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230824 06:24:39.184" endtime="20230824 06:24:39.316"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230824 06:24:39.318" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20230824 06:24:39.317" endtime="20230824 06:24:39.429"/>
+</kw>
+<status status="PASS" starttime="20230824 06:24:32.575" endtime="20230824 06:24:39.430"/>
+</test>
+<status status="PASS" starttime="20230824 06:24:32.375" endtime="20230824 06:24:39.431"/>
+</suite>
+<status status="PASS" starttime="20230824 06:24:32.357" endtime="20230824 06:24:39.431"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Userkeywords">Suites.Userkeywords</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230824 06:22:19.784" rpa="false" schemaversion="4">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="ForLoopDemo" source="C:\Users\user\PycharmProjects\automation\TestCase\ForLoopDemo.robot">
+<test id="s1-s1-t1" name="ForLoop6withExit" line="31">
+<kw name="Create List" library="BuiltIn">
+<var>@{items}</var>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>5</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230824 06:22:19.817" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20230824 06:22:19.816" endtime="20230824 06:22:19.817"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{items}</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230824 06:22:19.818" endtime="20230824 06:22:19.819"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==3</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230824 06:22:19.819" endtime="20230824 06:22:19.820"/>
+</kw>
+<status status="PASS" starttime="20230824 06:22:19.818" endtime="20230824 06:22:19.820"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230824 06:22:19.821" endtime="20230824 06:22:19.821"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==3</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230824 06:22:19.821" endtime="20230824 06:22:19.822"/>
+</kw>
+<status status="PASS" starttime="20230824 06:22:19.820" endtime="20230824 06:22:19.822"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230824 06:22:19.822" endtime="20230824 06:22:19.823"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==3</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20230824 06:22:19.823" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20230824 06:22:19.823" endtime="20230824 06:22:19.823"/>
+</kw>
+<status status="PASS" starttime="20230824 06:22:19.822" endtime="20230824 06:22:19.823"/>
+</iter>
+<status status="PASS" starttime="20230824 06:22:19.818" endtime="20230824 06:22:19.823"/>
+</for>
+<status status="PASS" starttime="20230824 06:22:19.815" endtime="20230824 06:22:19.824"/>
+</test>
+<status status="PASS" starttime="20230824 06:22:19.812" endtime="20230824 06:22:19.824"/>
+</suite>
+<status status="PASS" starttime="20230824 06:22:19.795" endtime="20230824 06:22:19.826"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="ForLoopDemo">Suites.ForLoopDemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

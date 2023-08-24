@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:43:09.713" rpa="false" schemaversion="4">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Userkeywords" source="C:\Users\user\PycharmProjects\automation\TestCase\Userkeywords.robot">
+<test id="s1-s1-t1" name="UserkeywordTest" line="12">
+<kw name="lauchBrowser" library="resources">
+<var>${PageTitle}</var>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>開啟瀏覽器並回傳網頁標題</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${appbrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 01:43:09.976" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20230825 01:43:09.975" endtime="20230825 01:43:13.828"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230825 01:43:13.828" endtime="20230825 01:43:13.953"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230825 01:43:13.961" level="INFO">${title} = nopCommerce demo store</msg>
+<status status="PASS" starttime="20230825 01:43:13.954" endtime="20230825 01:43:13.961"/>
+</kw>
+<msg timestamp="20230825 01:43:13.961" level="INFO">${PageTitle} = nopCommerce demo store</msg>
+<status status="PASS" starttime="20230825 01:43:09.974" endtime="20230825 01:43:13.961"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PageTitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230825 01:43:13.961" endtime="20230825 01:43:13.962"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${PageTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230825 01:43:13.962" level="INFO">nopCommerce demo store</msg>
+<status status="PASS" starttime="20230825 01:43:13.962" endtime="20230825 01:43:13.962"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log in')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230825 01:43:13.963" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<status status="PASS" starttime="20230825 01:43:13.962" endtime="20230825 01:43:14.583"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:43:14.584" level="INFO">Typing text 'kcem104@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230825 01:43:14.583" endtime="20230825 01:43:14.722"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 01:43:14.723" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20230825 01:43:14.722" endtime="20230825 01:43:14.859"/>
+</kw>
+<doc>使用自定義keyword lauchBrowser取代open browser,並回傳網頁標題</doc>
+<status status="PASS" starttime="20230825 01:43:09.973" endtime="20230825 01:43:14.860"/>
+</test>
+<status status="PASS" starttime="20230825 01:43:09.743" endtime="20230825 01:43:14.861"/>
+</suite>
+<status status="PASS" starttime="20230825 01:43:09.722" endtime="20230825 01:43:14.863"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Userkeywords">Suites.Userkeywords</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

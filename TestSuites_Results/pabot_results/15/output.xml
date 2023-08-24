@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:41:35.198" rpa="false" schemaversion="4">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="ScrollingPage" source="C:\Users\user\PycharmProjects\automation\TestCase\ScrollingPage.robot">
+<test id="s1-s1-t1" name="ScorllingTest" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 01:41:35.450" level="INFO">Opening browser 'chrome' to base url 'https://www.countries-ofthe-world.com/flags-of-the-world.html'.</msg>
+<status status="PASS" starttime="20230825 01:41:35.449" endtime="20230825 01:41:40.725"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230825 01:41:40.726" endtime="20230825 01:41:40.887"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:41:43.887" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:41:40.887" endtime="20230825 01:41:43.887"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:41:43.888" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:41:43.887" endtime="20230825 01:41:43.901"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:41:46.902" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:41:43.901" endtime="20230825 01:41:46.902"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath://*[@id="content"]/div[2]/div[2]/table[2]/tbody/tr[79]/td[1]/img</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230825 01:41:46.902" endtime="20230825 01:41:47.202"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:41:50.204" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:41:47.204" endtime="20230825 01:41:50.204"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:41:50.207" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:41:50.204" endtime="20230825 01:41:50.226"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:41:53.227" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:41:50.226" endtime="20230825 01:41:53.227"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,-document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230825 01:41:53.228" level="INFO">Executing JavaScript:
+window.scrollTo(0,-document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230825 01:41:53.227" endtime="20230825 01:41:53.238"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 01:41:56.240" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 01:41:53.238" endtime="20230825 01:41:56.240"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230825 01:41:56.240" endtime="20230825 01:41:58.412"/>
+</kw>
+<doc>捲動網頁測試,包含捲動固定像素,捲動到可是特定網頁元素,捲動到頂或捲動到底</doc>
+<status status="PASS" starttime="20230825 01:41:35.446" endtime="20230825 01:41:58.413"/>
+</test>
+<status status="PASS" starttime="20230825 01:41:35.226" endtime="20230825 01:41:58.416"/>
+</suite>
+<status status="PASS" starttime="20230825 01:41:35.207" endtime="20230825 01:41:58.420"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="ScrollingPage">Suites.ScrollingPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

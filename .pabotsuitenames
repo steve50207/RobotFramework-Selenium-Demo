@@ -1,0 +1,32 @@
+datasources:1145af61e1a2cac06d56673d2fe5be8ccd73e71f
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:389ec3a0d9b2c4b3ca7f45f2a981c324086d9997
+--suite Suites.Alerts
+--suite Suites.CaptureScreen
+--suite Suites.CloseAll
+--suite Suites.DBTesting
+--suite Suites.Dropdowns
+--suite Suites.ForLoopDemo
+--suite Suites.Frames
+--suite Suites.GetAllLinks
+--suite Suites.Implicitwait
+--suite Suites.Inputbox
+--suite Suites.LoginTest
+--suite Suites.MouseOperations
+--suite Suites.NavigationalKeywords
+--suite Suites.Radiobuttons
+--suite Suites.RegistTest
+--suite Suites.ScrollingPage
+--suite Suites.SetupAndTearDown
+--suite Suites.SpeedTests
+--suite Suites.SwitchToMultipleBrowsers
+--suite Suites.TabbedWindows
+--suite Suites.TableDemo
+--suite Suites.Tagging
+--suite Suites.TestDrivenTest1
+--suite Suites.TestDrivenTest2 Excel
+--suite Suites.TestDrivenTest3 CSV
+--suite Suites.Timeout
+--suite Suites.Userkeywords
+--suite Suites.SimpleLoginTest
