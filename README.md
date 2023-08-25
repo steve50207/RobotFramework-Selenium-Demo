@@ -7,7 +7,7 @@
 - RegistTest:
      - 將Excel自定義的註冊資料自動填寫在註冊網站，並確認註冊資料如預期顯示在網頁尾端表格內，驗證網頁註冊系統功能正確運作。
 - AllTestSuites:
-     - 透過Jenkins進行自動建置(autobuild)，觸發多個網頁自動化測試套件(TestSuite)，並且透過pabot平行執行，達到一鍵執行完整網頁測試計畫的效果。
+     - 透過Jenkins進行自動建置(autobuild)，透過pabot可以執行多個網頁自動化測試套件(TestSuite)，達到一鍵執行完整網頁測試計畫(Test Plan)的效果。
 
 ## 測試工具: 
 - 本項網頁自動化測試專案使用以下測試工具:
