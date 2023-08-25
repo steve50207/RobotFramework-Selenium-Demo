@@ -1,84 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:42:45.669" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:24:09.834" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="Tagging" source="C:\Users\user\PycharmProjects\automation\TestCase\Tagging.robot">
-<test id="s1-s1-t1" name="Test Case 1" line="8">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is test case 1</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:45.700" endtime="20230825 01:42:45.701"/>
+<suite id="s1-s1" name="TableDemo" source="C:\Users\user\PycharmProjects\automation\TestCase\TableDemo.robot">
+<test id="s1-s1-t1" name="TableValidations" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230825 17:24:10.196" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20230825 17:24:10.190" endtime="20230825 17:24:18.216"/>
 </kw>
-<tag>Smoke</tag>
-<tag>Testersdock</tag>
-<status status="PASS" starttime="20230825 01:42:45.699" endtime="20230825 01:42:45.701"/>
-</test>
-<test id="s1-s1-t2" name="Test Case 2" line="12">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is test case 2</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:45.702" endtime="20230825 01:42:45.702"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230825 17:24:18.216" endtime="20230825 17:24:18.386"/>
 </kw>
-<tag>Regression</tag>
-<tag>Testersdock</tag>
-<status status="PASS" starttime="20230825 01:42:45.701" endtime="20230825 01:42:45.702"/>
-</test>
-<test id="s1-s1-t3" name="Test Case 3" line="16">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is test case 3</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:45.703" endtime="20230825 01:42:45.703"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${rows}</var>
+<arg>//table[@name="BookTable"]/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230825 17:24:18.410" level="INFO">${rows} = 7</msg>
+<status status="PASS" starttime="20230825 17:24:18.386" endtime="20230825 17:24:18.410"/>
 </kw>
-<tag>Regression</tag>
-<tag>Testersdock</tag>
-<status status="PASS" starttime="20230825 01:42:45.703" endtime="20230825 01:42:45.704"/>
-</test>
-<test id="s1-s1-t4" name="Test Case 4" line="20">
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is test case 4</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:45.704" endtime="20230825 01:42:45.704"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${cols}</var>
+<arg>//table[@name="BookTable"]/tbody/tr[1]/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230825 17:24:18.423" level="INFO">${cols} = 4</msg>
+<status status="PASS" starttime="20230825 17:24:18.411" endtime="20230825 17:24:18.423"/>
 </kw>
-<tag>Smoke</tag>
-<tag>Testersdock</tag>
-<status status="PASS" starttime="20230825 01:42:45.704" endtime="20230825 01:42:45.705"/>
-</test>
-<test id="s1-s1-t5" name="Test Case 5" line="24">
 <kw name="Log To Console" library="BuiltIn">
-<arg>This is test case 5</arg>
+<arg>${rows}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:45.705" endtime="20230825 01:42:45.705"/>
+<status status="PASS" starttime="20230825 17:24:18.423" endtime="20230825 17:24:18.424"/>
 </kw>
-<tag>Sanity</tag>
-<tag>Testersdock</tag>
-<status status="PASS" starttime="20230825 01:42:45.705" endtime="20230825 01:42:45.705"/>
-</test>
-<test id="s1-s1-t6" name="Test Case 6" line="28">
 <kw name="Log To Console" library="BuiltIn">
-<arg>This is test case 6</arg>
+<arg>${cols}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:45.706" endtime="20230825 01:42:45.706"/>
+<status status="PASS" starttime="20230825 17:24:18.424" endtime="20230825 17:24:18.425"/>
 </kw>
-<tag>Testersdock</tag>
-<status status="PASS" starttime="20230825 01:42:45.706" endtime="20230825 01:42:45.707"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${data}</var>
+<arg>//table[@name="BookTable"]/tbody/tr[5]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230825 17:24:18.573" level="INFO">${data} = Master In Selenium</msg>
+<status status="PASS" starttime="20230825 17:24:18.425" endtime="20230825 17:24:18.573"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230825 17:24:18.573" endtime="20230825 17:24:18.574"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>//table[@name="BookTable"]</arg>
+<arg>3</arg>
+<arg>Javascript</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20230825 17:24:18.574" endtime="20230825 17:24:18.702"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>//table[@name="BookTable"]</arg>
+<arg>2</arg>
+<arg>Amit</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20230825 17:24:18.702" endtime="20230825 17:24:18.764"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>//table[@name="BookTable"]</arg>
+<arg>2</arg>
+<arg>4</arg>
+<arg>300</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20230825 17:24:18.836" level="INFO">Table cell contains '300'.</msg>
+<status status="PASS" starttime="20230825 17:24:18.764" endtime="20230825 17:24:18.836"/>
+</kw>
+<kw name="Table Header Should Contain" library="SeleniumLibrary">
+<arg>//table[@name="BookTable"]</arg>
+<arg>Price</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" starttime="20230825 17:24:18.836" endtime="20230825 17:24:18.933"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230825 17:24:18.933" endtime="20230825 17:24:25.179"/>
+</kw>
+<doc>網頁表格元素驗證,包含row,column,header,cell等表格元素</doc>
+<status status="PASS" starttime="20230825 17:24:10.166" endtime="20230825 17:24:25.179"/>
 </test>
-<doc>Tags in Robot Framework</doc>
-<status status="PASS" starttime="20230825 01:42:45.696" endtime="20230825 01:42:45.707"/>
+<status status="PASS" starttime="20230825 17:24:09.863" endtime="20230825 17:24:25.180"/>
 </suite>
-<status status="PASS" starttime="20230825 01:42:45.678" endtime="20230825 01:42:45.708"/>
+<status status="PASS" starttime="20230825 17:24:09.842" endtime="20230825 17:24:25.182"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">Regression</stat>
-<stat pass="1" fail="0" skip="0">Sanity</stat>
-<stat pass="2" fail="0" skip="0">Smoke</stat>
-<stat pass="6" fail="0" skip="0">Testersdock</stat>
 </tag>
 <suite>
-<stat pass="6" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="6" fail="0" skip="0" id="s1-s1" name="Tagging">Suites.Tagging</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TableDemo">Suites.TableDemo</stat>
 </suite>
 </statistics>
 <errors>

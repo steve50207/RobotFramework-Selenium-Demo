@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:41:59.708" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:23:13.652" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
 <suite id="s1-s1" name="SetupAndTearDown" source="C:\Users\user\PycharmProjects\automation\TestCase\SetupAndTearDown.robot">
 <kw name="Log To Console" library="BuiltIn" type="SETUP">
 <arg>Opening Browser</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.741" endtime="20230825 01:41:59.741"/>
+<status status="PASS" starttime="20230825 17:23:13.693" endtime="20230825 17:23:13.694"/>
 </kw>
 <test id="s1-s1-t1" name="TC1 Prepaid Recharge" line="13">
 <kw name="Log To Console" library="BuiltIn" type="SETUP">
 <arg>Login to application</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.742" endtime="20230825 01:41:59.743"/>
+<status status="PASS" starttime="20230825 17:23:13.695" endtime="20230825 17:23:13.695"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>This is prepaid recharge testcase</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.743" endtime="20230825 01:41:59.743"/>
+<status status="PASS" starttime="20230825 17:23:13.695" endtime="20230825 17:23:13.696"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
 <arg>Logout from application</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.744" endtime="20230825 01:41:59.744"/>
+<status status="PASS" starttime="20230825 17:23:13.696" endtime="20230825 17:23:13.696"/>
 </kw>
-<status status="PASS" starttime="20230825 01:41:59.741" endtime="20230825 01:41:59.744"/>
+<status status="PASS" starttime="20230825 17:23:13.694" endtime="20230825 17:23:13.696"/>
 </test>
 <test id="s1-s1-t2" name="TC2 Postpaid Recharge" line="17">
 <kw name="Log To Console" library="BuiltIn" type="SETUP">
 <arg>Login to application</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.745" endtime="20230825 01:41:59.745"/>
+<status status="PASS" starttime="20230825 17:23:13.697" endtime="20230825 17:23:13.698"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>This is postpaid recharge testcase</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.746" endtime="20230825 01:41:59.746"/>
+<status status="PASS" starttime="20230825 17:23:13.698" endtime="20230825 17:23:13.698"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
 <arg>Logout from application</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.746" endtime="20230825 01:41:59.747"/>
+<status status="PASS" starttime="20230825 17:23:13.699" endtime="20230825 17:23:13.699"/>
 </kw>
-<status status="PASS" starttime="20230825 01:41:59.744" endtime="20230825 01:41:59.747"/>
+<status status="PASS" starttime="20230825 17:23:13.697" endtime="20230825 17:23:13.699"/>
 </test>
 <test id="s1-s1-t3" name="TC3 Search" line="21">
 <kw name="Log To Console" library="BuiltIn" type="SETUP">
 <arg>Login to application</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.748" endtime="20230825 01:41:59.749"/>
+<status status="PASS" starttime="20230825 17:23:13.700" endtime="20230825 17:23:13.700"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>This is search test case</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.749" endtime="20230825 01:41:59.750"/>
+<status status="PASS" starttime="20230825 17:23:13.701" endtime="20230825 17:23:13.701"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
 <arg>Logout from application</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.750" endtime="20230825 01:41:59.750"/>
+<status status="PASS" starttime="20230825 17:23:13.701" endtime="20230825 17:23:13.701"/>
 </kw>
-<status status="PASS" starttime="20230825 01:41:59.747" endtime="20230825 01:41:59.750"/>
+<status status="PASS" starttime="20230825 17:23:13.699" endtime="20230825 17:23:13.701"/>
 </test>
 <test id="s1-s1-t4" name="TC4 Anvance Search" line="25">
 <kw name="Log To Console" library="BuiltIn" type="SETUP">
 <arg>Login to application</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.751" endtime="20230825 01:41:59.752"/>
+<status status="PASS" starttime="20230825 17:23:13.702" endtime="20230825 17:23:13.702"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>This is advance search test case</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.752" endtime="20230825 01:41:59.752"/>
+<status status="PASS" starttime="20230825 17:23:13.702" endtime="20230825 17:23:13.703"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
 <arg>Logout from application</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.753" endtime="20230825 01:41:59.753"/>
+<status status="PASS" starttime="20230825 17:23:13.703" endtime="20230825 17:23:13.703"/>
 </kw>
-<status status="PASS" starttime="20230825 01:41:59.751" endtime="20230825 01:41:59.753"/>
+<status status="PASS" starttime="20230825 17:23:13.702" endtime="20230825 17:23:13.703"/>
 </test>
 <kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
 <arg>Closing Browser</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:59.754" endtime="20230825 01:41:59.754"/>
+<status status="PASS" starttime="20230825 17:23:13.704" endtime="20230825 17:23:13.704"/>
 </kw>
-<status status="PASS" starttime="20230825 01:41:59.738" endtime="20230825 01:41:59.755"/>
+<status status="PASS" starttime="20230825 17:23:13.687" endtime="20230825 17:23:13.704"/>
 </suite>
-<status status="PASS" starttime="20230825 01:41:59.718" endtime="20230825 01:41:59.756"/>
+<status status="PASS" starttime="20230825 17:23:13.664" endtime="20230825 17:23:13.705"/>
 </suite>
 <statistics>
 <total>

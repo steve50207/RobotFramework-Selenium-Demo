@@ -1,72 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:42:00.438" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:23:14.469" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="SpeedTests" source="C:\Users\user\PycharmProjects\automation\TestCase\SpeedTests.robot">
-<test id="s1-s1-t1" name="RegSpeedTest" line="10">
+<suite id="s1-s1" name="SimpleLoginTest" source="C:\Users\user\PycharmProjects\automation\TestCase\SimpleLoginTest.robot">
+<test id="s1-s1-t1" name="LoginTest" line="11">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230825 01:42:00.691" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/register'.</msg>
-<status status="PASS" starttime="20230825 01:42:00.690" endtime="20230825 01:42:05.741"/>
+<msg timestamp="20230825 17:23:15.167" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20230825 17:23:15.166" endtime="20230825 17:23:19.763"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230825 01:42:05.742" endtime="20230825 01:42:05.904"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>2 seconds</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230825 01:42:05.905" endtime="20230825 01:42:05.907"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>Gender</arg>
-<arg>M</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20230825 01:42:05.910" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
-<status status="PASS" starttime="20230825 01:42:05.908" endtime="20230825 01:42:12.049"/>
+<kw name="LoginIntoApplication">
+<doc>輸入帳號與密碼並點擊登入</doc>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Log in')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230825 17:23:19.767" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<status status="PASS" starttime="20230825 17:23:19.765" endtime="20230825 17:23:20.676"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>name:FirstName</arg>
-<arg>Kuan Yu</arg>
+<arg>id:Email</arg>
+<arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:12.050" level="INFO">Typing text 'Kuan Yu' into text field 'name:FirstName'.</msg>
-<status status="PASS" starttime="20230825 01:42:12.049" endtime="20230825 01:42:18.226"/>
+<msg timestamp="20230825 17:23:20.677" level="INFO">Typing text 'kcem104@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230825 17:23:20.677" endtime="20230825 17:23:20.825"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>name:LastName</arg>
-<arg>Chen</arg>
+<arg>id:Password</arg>
+<arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:18.227" level="INFO">Typing text 'Chen' into text field 'name:LastName'.</msg>
-<status status="PASS" starttime="20230825 01:42:18.226" endtime="20230825 01:42:24.394"/>
+<msg timestamp="20230825 17:23:20.826" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20230825 17:23:20.826" endtime="20230825 17:23:20.950"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:Email</arg>
-<arg>kcem104@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:24.395" level="INFO">Typing text 'kcem104@gmail.com' into text field 'name:Email'.</msg>
-<status status="PASS" starttime="20230825 01:42:24.394" endtime="20230825 01:42:30.677"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230825 17:23:20.952" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
+<status status="PASS" starttime="20230825 17:23:20.951" endtime="20230825 17:23:21.291"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:Password</arg>
-<arg>G#n3ik9Th54STN</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:30.678" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'name:Password'.</msg>
-<status status="PASS" starttime="20230825 01:42:30.677" endtime="20230825 01:42:36.799"/>
+<status status="PASS" starttime="20230825 17:23:19.764" endtime="20230825 17:23:21.291"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:ConfirmPassword</arg>
-<arg>G#n3ik9Th54STN</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:36.800" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'name:ConfirmPassword'.</msg>
-<status status="PASS" starttime="20230825 01:42:36.799" endtime="20230825 01:42:42.926"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230825 17:23:21.291" endtime="20230825 17:23:23.443"/>
 </kw>
-<doc>進行網頁註冊時,測試每個keyword執行之間的不同延遲時間</doc>
-<status status="PASS" starttime="20230825 01:42:00.688" endtime="20230825 01:42:42.926"/>
+<doc>網站登入測試,包含開啟網頁,輸入帳號與密碼並點擊登入,關閉網頁</doc>
+<status status="PASS" starttime="20230825 17:23:15.164" endtime="20230825 17:23:23.443"/>
 </test>
-<status status="PASS" starttime="20230825 01:42:00.463" endtime="20230825 01:42:42.927"/>
+<status status="PASS" starttime="20230825 17:23:14.505" endtime="20230825 17:23:23.444"/>
 </suite>
-<status status="PASS" starttime="20230825 01:42:00.446" endtime="20230825 01:42:42.928"/>
+<status status="PASS" starttime="20230825 17:23:14.481" endtime="20230825 17:23:23.447"/>
 </suite>
 <statistics>
 <total>
@@ -76,7 +59,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="SpeedTests">Suites.SpeedTests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="SimpleLoginTest">Suites.SimpleLoginTest</stat>
 </suite>
 </statistics>
 <errors>

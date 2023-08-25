@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:41:17.603" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:22:39.697" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
 <suite id="s1-s1" name="NavigationalKeywords" source="C:\Users\user\PycharmProjects\automation\TestCase\NavigationalKeywords.robot">
 <test id="s1-s1-t1" name="NavigationTest" line="10">
@@ -7,78 +7,78 @@
 <arg>${url_1}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230825 01:41:17.830" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
-<status status="PASS" starttime="20230825 01:41:17.829" endtime="20230825 01:41:21.295"/>
+<msg timestamp="20230825 17:22:39.940" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" starttime="20230825 17:22:39.939" endtime="20230825 17:22:43.995"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230825 01:41:21.295" endtime="20230825 01:41:21.425"/>
+<status status="PASS" starttime="20230825 17:22:43.996" endtime="20230825 17:22:44.149"/>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${loc}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230825 01:41:21.434" level="INFO">${loc} = https://www.google.com/</msg>
-<status status="PASS" starttime="20230825 01:41:21.425" endtime="20230825 01:41:21.434"/>
+<msg timestamp="20230825 17:22:44.164" level="INFO">${loc} = https://www.google.com/</msg>
+<status status="PASS" starttime="20230825 17:22:44.150" endtime="20230825 17:22:44.164"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${loc}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:21.434" endtime="20230825 01:41:21.435"/>
+<status status="PASS" starttime="20230825 17:22:44.164" endtime="20230825 17:22:44.165"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url_2}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230825 01:41:21.435" level="INFO">Opening url 'https://www.bing.com'</msg>
-<status status="PASS" starttime="20230825 01:41:21.435" endtime="20230825 01:41:22.034"/>
+<msg timestamp="20230825 17:22:44.167" level="INFO">Opening url 'https://www.bing.com'</msg>
+<status status="PASS" starttime="20230825 17:22:44.165" endtime="20230825 17:22:44.979"/>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${loc}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230825 01:41:22.042" level="INFO">${loc} = https://www.bing.com/</msg>
-<status status="PASS" starttime="20230825 01:41:22.034" endtime="20230825 01:41:22.042"/>
+<msg timestamp="20230825 17:22:45.004" level="INFO">${loc} = https://www.bing.com/</msg>
+<status status="PASS" starttime="20230825 17:22:44.979" endtime="20230825 17:22:45.004"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${loc}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:22.043" endtime="20230825 01:41:22.043"/>
+<status status="PASS" starttime="20230825 17:22:45.004" endtime="20230825 17:22:45.005"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230825 01:41:25.043" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230825 01:41:22.043" endtime="20230825 01:41:25.043"/>
+<msg timestamp="20230825 17:22:48.007" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 17:22:45.006" endtime="20230825 17:22:48.007"/>
 </kw>
 <kw name="Go Back" library="SeleniumLibrary">
 <doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" starttime="20230825 01:41:25.044" endtime="20230825 01:41:25.089"/>
+<status status="PASS" starttime="20230825 17:22:48.007" endtime="20230825 17:22:48.085"/>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${loc}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230825 01:41:25.100" level="INFO">${loc} = https://www.google.com/</msg>
-<status status="PASS" starttime="20230825 01:41:25.089" endtime="20230825 01:41:25.100"/>
+<msg timestamp="20230825 17:22:48.091" level="INFO">${loc} = https://www.google.com/</msg>
+<status status="PASS" starttime="20230825 17:22:48.085" endtime="20230825 17:22:48.091"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${loc}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:41:25.100" endtime="20230825 01:41:25.101"/>
+<status status="PASS" starttime="20230825 17:22:48.091" endtime="20230825 17:22:48.092"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230825 01:41:28.102" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230825 01:41:25.101" endtime="20230825 01:41:28.102"/>
+<msg timestamp="20230825 17:22:51.094" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 17:22:48.092" endtime="20230825 17:22:51.094"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230825 01:41:28.102" endtime="20230825 01:41:30.238"/>
+<status status="PASS" starttime="20230825 17:22:51.094" endtime="20230825 17:22:53.697"/>
 </kw>
 <doc>控制網頁跳軟與返回</doc>
-<status status="PASS" starttime="20230825 01:41:17.828" endtime="20230825 01:41:30.238"/>
+<status status="PASS" starttime="20230825 17:22:39.936" endtime="20230825 17:22:53.698"/>
 </test>
-<status status="PASS" starttime="20230825 01:41:17.636" endtime="20230825 01:41:30.240"/>
+<status status="PASS" starttime="20230825 17:22:39.727" endtime="20230825 17:22:53.699"/>
 </suite>
-<status status="PASS" starttime="20230825 01:41:17.613" endtime="20230825 01:41:30.242"/>
+<status status="PASS" starttime="20230825 17:22:39.705" endtime="20230825 17:22:53.702"/>
 </suite>
 <statistics>
 <total>

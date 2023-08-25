@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:40:52.838" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:22:03.142" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
 <suite id="s1-s1" name="ForLoopDemo" source="C:\Users\user\PycharmProjects\automation\TestCase\ForLoopDemo.robot">
 <test id="s1-s1-t1" name="ForLoop6withExit" line="36">
@@ -11,8 +11,8 @@
 <arg>4</arg>
 <arg>5</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20230825 01:40:52.987" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
-<status status="PASS" starttime="20230825 01:40:52.987" endtime="20230825 01:40:52.988"/>
+<msg timestamp="20230825 17:22:03.256" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20230825 17:22:03.255" endtime="20230825 17:22:03.256"/>
 </kw>
 <for flavor="IN">
 <var>${i}</var>
@@ -22,52 +22,52 @@
 <kw name="Log To Console" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:40:52.990" endtime="20230825 01:40:52.990"/>
+<status status="PASS" starttime="20230825 17:22:03.256" endtime="20230825 17:22:03.257"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i}==3</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20230825 01:40:52.990" endtime="20230825 01:40:52.991"/>
+<status status="PASS" starttime="20230825 17:22:03.257" endtime="20230825 17:22:03.258"/>
 </kw>
-<status status="PASS" starttime="20230825 01:40:52.989" endtime="20230825 01:40:52.991"/>
+<status status="PASS" starttime="20230825 17:22:03.256" endtime="20230825 17:22:03.258"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:40:52.991" endtime="20230825 01:40:52.991"/>
+<status status="PASS" starttime="20230825 17:22:03.258" endtime="20230825 17:22:03.259"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i}==3</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20230825 01:40:52.992" endtime="20230825 01:40:52.992"/>
+<status status="PASS" starttime="20230825 17:22:03.259" endtime="20230825 17:22:03.259"/>
 </kw>
-<status status="PASS" starttime="20230825 01:40:52.991" endtime="20230825 01:40:52.992"/>
+<status status="PASS" starttime="20230825 17:22:03.258" endtime="20230825 17:22:03.259"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:40:52.992" endtime="20230825 01:40:52.993"/>
+<status status="PASS" starttime="20230825 17:22:03.260" endtime="20230825 17:22:03.261"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>${i}==3</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<msg timestamp="20230825 01:40:52.993" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20230825 01:40:52.993" endtime="20230825 01:40:52.993"/>
+<msg timestamp="20230825 17:22:03.262" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20230825 17:22:03.261" endtime="20230825 17:22:03.262"/>
 </kw>
-<status status="PASS" starttime="20230825 01:40:52.992" endtime="20230825 01:40:52.993"/>
+<status status="PASS" starttime="20230825 17:22:03.260" endtime="20230825 17:22:03.262"/>
 </iter>
-<status status="PASS" starttime="20230825 01:40:52.988" endtime="20230825 01:40:52.993"/>
+<status status="PASS" starttime="20230825 17:22:03.256" endtime="20230825 17:22:03.262"/>
 </for>
 <doc>FOR IN+List(數字)+Exit跳脫迴圈</doc>
-<status status="PASS" starttime="20230825 01:40:52.986" endtime="20230825 01:40:52.993"/>
+<status status="PASS" starttime="20230825 17:22:03.253" endtime="20230825 17:22:03.262"/>
 </test>
-<status status="PASS" starttime="20230825 01:40:52.967" endtime="20230825 01:40:52.994"/>
+<status status="PASS" starttime="20230825 17:22:03.249" endtime="20230825 17:22:03.263"/>
 </suite>
-<status status="PASS" starttime="20230825 01:40:52.931" endtime="20230825 01:40:52.995"/>
+<status status="PASS" starttime="20230825 17:22:03.213" endtime="20230825 17:22:03.264"/>
 </suite>
 <statistics>
 <total>

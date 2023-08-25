@@ -1,314 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:42:46.432" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:24:15.148" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="TestDrivenTest1" source="C:\Users\user\PycharmProjects\automation\TestCase\TestDrivenTest1.robot">
-<kw name="Open My Browser" library="login_resource" type="SETUP">
-<doc>開啟瀏覽器</doc>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${LOGIN URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230825 01:42:46.716" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
-<status status="PASS" starttime="20230825 01:42:46.715" endtime="20230825 01:42:51.428"/>
+<suite id="s1-s1" name="Tagging" source="C:\Users\user\PycharmProjects\automation\TestCase\Tagging.robot">
+<test id="s1-s1-t1" name="Test Case 1" line="8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is test case 1</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230825 17:24:15.203" endtime="20230825 17:24:15.204"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230825 01:42:51.428" endtime="20230825 01:42:51.558"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230825 01:42:53.559" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230825 01:42:51.559" endtime="20230825 01:42:53.559"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:46.714" endtime="20230825 01:42:53.559"/>
-</kw>
-<test id="s1-s1-t1" name="Right Username Empty Password" line="9">
-<kw name="Invalid Login">
-<arg>admin@yourstore.com</arg>
-<arg>${Empty}</arg>
-<doc>網頁登入失敗功能驗證,確認輸入錯誤帳號密碼,頁面會出現錯誤訊息</doc>
-<kw name="Input Username" library="login_resource">
-<arg>${username}</arg>
-<doc>輸入帳號</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Email</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:53.562" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230825 01:42:53.562" endtime="20230825 01:42:53.706"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:53.561" endtime="20230825 01:42:53.706"/>
-</kw>
-<kw name="Input Password" library="login_resource">
-<arg>${password}</arg>
-<doc>輸入密碼</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Password</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:53.707" level="INFO">Typing text '' into text field 'id:Password'.</msg>
-<status status="PASS" starttime="20230825 01:42:53.707" endtime="20230825 01:42:53.789"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:53.706" endtime="20230825 01:42:53.789"/>
-</kw>
-<kw name="Click Login Button" library="login_resource">
-<doc>點擊登入按鈕</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://button[contains(text(),'Log in')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:53.790" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
-<status status="PASS" starttime="20230825 01:42:53.789" endtime="20230825 01:42:54.713"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:53.789" endtime="20230825 01:42:54.713"/>
-</kw>
-<kw name="Error Message Should Be Visible" library="login_resource">
-<doc>驗證網頁登入失敗</doc>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Login was unsuccessful</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230825 01:42:54.764" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
-<status status="PASS" starttime="20230825 01:42:54.714" endtime="20230825 01:42:54.764"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:54.713" endtime="20230825 01:42:54.765"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:53.560" endtime="20230825 01:42:54.766"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:53.559" endtime="20230825 01:42:54.767"/>
+<tag>Smoke</tag>
+<tag>Testersdock</tag>
+<status status="PASS" starttime="20230825 17:24:15.201" endtime="20230825 17:24:15.205"/>
 </test>
-<test id="s1-s1-t2" name="Right Username Wrong Password" line="10">
-<kw name="Invalid Login">
-<arg>admin@yourstore.com</arg>
-<arg>xyz</arg>
-<doc>網頁登入失敗功能驗證,確認輸入錯誤帳號密碼,頁面會出現錯誤訊息</doc>
-<kw name="Input Username" library="login_resource">
-<arg>${username}</arg>
-<doc>輸入帳號</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Email</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:54.774" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230825 01:42:54.773" endtime="20230825 01:42:55.008"/>
+<test id="s1-s1-t2" name="Test Case 2" line="12">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is test case 2</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230825 17:24:15.209" endtime="20230825 17:24:15.210"/>
 </kw>
-<status status="PASS" starttime="20230825 01:42:54.772" endtime="20230825 01:42:55.008"/>
-</kw>
-<kw name="Input Password" library="login_resource">
-<arg>${password}</arg>
-<doc>輸入密碼</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Password</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:55.011" level="INFO">Typing text 'xyz' into text field 'id:Password'.</msg>
-<status status="PASS" starttime="20230825 01:42:55.009" endtime="20230825 01:42:55.109"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:55.009" endtime="20230825 01:42:55.109"/>
-</kw>
-<kw name="Click Login Button" library="login_resource">
-<doc>點擊登入按鈕</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://button[contains(text(),'Log in')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:55.110" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
-<status status="PASS" starttime="20230825 01:42:55.109" endtime="20230825 01:42:56.026"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:55.109" endtime="20230825 01:42:56.026"/>
-</kw>
-<kw name="Error Message Should Be Visible" library="login_resource">
-<doc>驗證網頁登入失敗</doc>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Login was unsuccessful</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230825 01:42:56.056" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
-<status status="PASS" starttime="20230825 01:42:56.027" endtime="20230825 01:42:56.056"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.026" endtime="20230825 01:42:56.056"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:54.771" endtime="20230825 01:42:56.056"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:54.769" endtime="20230825 01:42:56.057"/>
+<tag>Regression</tag>
+<tag>Testersdock</tag>
+<status status="PASS" starttime="20230825 17:24:15.206" endtime="20230825 17:24:15.210"/>
 </test>
-<test id="s1-s1-t3" name="Wrong Username Right Password" line="11">
-<kw name="Invalid Login">
-<arg>adm@yourstore.com</arg>
-<arg>admin</arg>
-<doc>網頁登入失敗功能驗證,確認輸入錯誤帳號密碼,頁面會出現錯誤訊息</doc>
-<kw name="Input Username" library="login_resource">
-<arg>${username}</arg>
-<doc>輸入帳號</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Email</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:56.061" level="INFO">Typing text 'adm@yourstore.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230825 01:42:56.060" endtime="20230825 01:42:56.194"/>
+<test id="s1-s1-t3" name="Test Case 3" line="16">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is test case 3</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230825 17:24:15.212" endtime="20230825 17:24:15.212"/>
 </kw>
-<status status="PASS" starttime="20230825 01:42:56.059" endtime="20230825 01:42:56.194"/>
-</kw>
-<kw name="Input Password" library="login_resource">
-<arg>${password}</arg>
-<doc>輸入密碼</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Password</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:56.196" level="INFO">Typing text 'admin' into text field 'id:Password'.</msg>
-<status status="PASS" starttime="20230825 01:42:56.195" endtime="20230825 01:42:56.320"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.194" endtime="20230825 01:42:56.321"/>
-</kw>
-<kw name="Click Login Button" library="login_resource">
-<doc>點擊登入按鈕</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://button[contains(text(),'Log in')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:56.322" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
-<status status="PASS" starttime="20230825 01:42:56.322" endtime="20230825 01:42:56.699"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.321" endtime="20230825 01:42:56.700"/>
-</kw>
-<kw name="Error Message Should Be Visible" library="login_resource">
-<doc>驗證網頁登入失敗</doc>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Login was unsuccessful</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230825 01:42:56.712" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
-<status status="PASS" starttime="20230825 01:42:56.701" endtime="20230825 01:42:56.712"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.700" endtime="20230825 01:42:56.713"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.059" endtime="20230825 01:42:56.713"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.058" endtime="20230825 01:42:56.713"/>
+<tag>Regression</tag>
+<tag>Testersdock</tag>
+<status status="PASS" starttime="20230825 17:24:15.211" endtime="20230825 17:24:15.213"/>
 </test>
-<test id="s1-s1-t4" name="Wrong Username Empty Password" line="12">
-<kw name="Invalid Login">
-<arg>adm@yourstore.com</arg>
-<arg>${Empty}</arg>
-<doc>網頁登入失敗功能驗證,確認輸入錯誤帳號密碼,頁面會出現錯誤訊息</doc>
-<kw name="Input Username" library="login_resource">
-<arg>${username}</arg>
-<doc>輸入帳號</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Email</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:56.718" level="INFO">Typing text 'adm@yourstore.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230825 01:42:56.718" endtime="20230825 01:42:56.817"/>
+<test id="s1-s1-t4" name="Test Case 4" line="20">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is test case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230825 17:24:15.214" endtime="20230825 17:24:15.214"/>
 </kw>
-<status status="PASS" starttime="20230825 01:42:56.717" endtime="20230825 01:42:56.817"/>
-</kw>
-<kw name="Input Password" library="login_resource">
-<arg>${password}</arg>
-<doc>輸入密碼</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Password</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:56.819" level="INFO">Typing text '' into text field 'id:Password'.</msg>
-<status status="PASS" starttime="20230825 01:42:56.819" endtime="20230825 01:42:56.904"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.818" endtime="20230825 01:42:56.905"/>
-</kw>
-<kw name="Click Login Button" library="login_resource">
-<doc>點擊登入按鈕</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://button[contains(text(),'Log in')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:56.906" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
-<status status="PASS" starttime="20230825 01:42:56.905" endtime="20230825 01:42:57.295"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.905" endtime="20230825 01:42:57.297"/>
-</kw>
-<kw name="Error Message Should Be Visible" library="login_resource">
-<doc>驗證網頁登入失敗</doc>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Login was unsuccessful</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230825 01:42:57.310" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
-<status status="PASS" starttime="20230825 01:42:57.299" endtime="20230825 01:42:57.310"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:57.298" endtime="20230825 01:42:57.310"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.715" endtime="20230825 01:42:57.311"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:56.714" endtime="20230825 01:42:57.311"/>
+<tag>Smoke</tag>
+<tag>Testersdock</tag>
+<status status="PASS" starttime="20230825 17:24:15.213" endtime="20230825 17:24:15.215"/>
 </test>
-<test id="s1-s1-t5" name="Wrong Username Wrong Password" line="13">
-<kw name="Invalid Login">
-<arg>adm@yourstore.com</arg>
-<arg>xyz</arg>
-<doc>網頁登入失敗功能驗證,確認輸入錯誤帳號密碼,頁面會出現錯誤訊息</doc>
-<kw name="Input Username" library="login_resource">
-<arg>${username}</arg>
-<doc>輸入帳號</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Email</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:57.314" level="INFO">Typing text 'adm@yourstore.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230825 01:42:57.312" endtime="20230825 01:42:57.408"/>
+<test id="s1-s1-t5" name="Test Case 5" line="24">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is test case 5</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230825 17:24:15.216" endtime="20230825 17:24:15.216"/>
 </kw>
-<status status="PASS" starttime="20230825 01:42:57.312" endtime="20230825 01:42:57.409"/>
-</kw>
-<kw name="Input Password" library="login_resource">
-<arg>${password}</arg>
-<doc>輸入密碼</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Password</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:57.410" level="INFO">Typing text 'xyz' into text field 'id:Password'.</msg>
-<status status="PASS" starttime="20230825 01:42:57.409" endtime="20230825 01:42:57.491"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:57.409" endtime="20230825 01:42:57.491"/>
-</kw>
-<kw name="Click Login Button" library="login_resource">
-<doc>點擊登入按鈕</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://button[contains(text(),'Log in')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:57.492" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
-<status status="PASS" starttime="20230825 01:42:57.491" endtime="20230825 01:42:57.866"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:57.491" endtime="20230825 01:42:57.866"/>
-</kw>
-<kw name="Error Message Should Be Visible" library="login_resource">
-<doc>驗證網頁登入失敗</doc>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Login was unsuccessful</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230825 01:42:57.887" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
-<status status="PASS" starttime="20230825 01:42:57.868" endtime="20230825 01:42:57.887"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:57.867" endtime="20230825 01:42:57.887"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:57.311" endtime="20230825 01:42:57.887"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:57.311" endtime="20230825 01:42:57.887"/>
+<tag>Sanity</tag>
+<tag>Testersdock</tag>
+<status status="PASS" starttime="20230825 17:24:15.215" endtime="20230825 17:24:15.217"/>
 </test>
-<kw name="Close Browsers" library="login_resource" type="TEARDOWN">
-<doc>關閉瀏覽器</doc>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230825 01:42:57.890" endtime="20230825 01:43:04.126"/>
+<test id="s1-s1-t6" name="Test Case 6" line="28">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is test case 6</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230825 17:24:15.218" endtime="20230825 17:24:15.218"/>
 </kw>
-<status status="PASS" starttime="20230825 01:42:57.889" endtime="20230825 01:43:04.126"/>
-</kw>
-<status status="PASS" starttime="20230825 01:42:46.484" endtime="20230825 01:43:04.126"/>
+<tag>Testersdock</tag>
+<status status="PASS" starttime="20230825 17:24:15.217" endtime="20230825 17:24:15.219"/>
+</test>
+<doc>Tags in Robot Framework</doc>
+<status status="PASS" starttime="20230825 17:24:15.187" endtime="20230825 17:24:15.220"/>
 </suite>
-<status status="PASS" starttime="20230825 01:42:46.441" endtime="20230825 01:43:04.130"/>
+<status status="PASS" starttime="20230825 17:24:15.157" endtime="20230825 17:24:15.223"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="2" fail="0" skip="0">Regression</stat>
+<stat pass="1" fail="0" skip="0">Sanity</stat>
+<stat pass="2" fail="0" skip="0">Smoke</stat>
+<stat pass="6" fail="0" skip="0">Testersdock</stat>
 </tag>
 <suite>
-<stat pass="5" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="5" fail="0" skip="0" id="s1-s1" name="TestDrivenTest1">Suites.TestDrivenTest1</stat>
+<stat pass="6" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="Tagging">Suites.Tagging</stat>
 </suite>
 </statistics>
 <errors>

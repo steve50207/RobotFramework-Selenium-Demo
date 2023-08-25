@@ -1,55 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:43:11.120" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:24:43.485" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="SimpleLoginTest" source="C:\Users\user\PycharmProjects\automation\TestCase\SimpleLoginTest.robot">
-<test id="s1-s1-t1" name="LoginTest" line="11">
-<kw name="Open Browser" library="SeleniumLibrary">
+<suite id="s1-s1" name="Userkeywords" source="C:\Users\user\PycharmProjects\automation\TestCase\Userkeywords.robot">
+<test id="s1-s1-t1" name="UserkeywordTest" line="12">
+<kw name="lauchBrowser" library="resources">
+<var>${PageTitle}</var>
 <arg>${url}</arg>
 <arg>${browser}</arg>
+<doc>開啟瀏覽器並回傳網頁標題</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${appbrowser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230825 01:43:11.348" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
-<status status="PASS" starttime="20230825 01:43:11.347" endtime="20230825 01:43:14.902"/>
+<msg timestamp="20230825 17:24:43.736" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20230825 17:24:43.735" endtime="20230825 17:24:48.596"/>
 </kw>
-<kw name="LoginIntoApplication">
-<doc>輸入帳號與密碼並點擊登入</doc>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230825 17:24:48.597" endtime="20230825 17:24:48.742"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230825 17:24:48.751" level="INFO">${title} = nopCommerce demo store</msg>
+<status status="PASS" starttime="20230825 17:24:48.742" endtime="20230825 17:24:48.751"/>
+</kw>
+<msg timestamp="20230825 17:24:48.752" level="INFO">${PageTitle} = nopCommerce demo store</msg>
+<status status="PASS" starttime="20230825 17:24:43.734" endtime="20230825 17:24:48.752"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PageTitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230825 17:24:48.752" endtime="20230825 17:24:48.752"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${PageTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230825 17:24:48.753" level="INFO">nopCommerce demo store</msg>
+<status status="PASS" starttime="20230825 17:24:48.752" endtime="20230825 17:24:48.753"/>
+</kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>xpath://a[contains(text(),'Log in')]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230825 01:43:14.903" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
-<status status="PASS" starttime="20230825 01:43:14.903" endtime="20230825 01:43:15.818"/>
+<msg timestamp="20230825 17:24:48.754" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<status status="PASS" starttime="20230825 17:24:48.753" endtime="20230825 17:24:49.581"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:Email</arg>
 <arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:43:15.820" level="INFO">Typing text 'kcem104@gmail.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230825 01:43:15.819" endtime="20230825 01:43:15.954"/>
+<msg timestamp="20230825 17:24:49.583" level="INFO">Typing text 'kcem104@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230825 17:24:49.581" endtime="20230825 17:24:49.732"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:Password</arg>
 <arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230825 01:43:15.955" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'id:Password'.</msg>
-<status status="PASS" starttime="20230825 01:43:15.955" endtime="20230825 01:43:16.090"/>
+<msg timestamp="20230825 17:24:49.733" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20230825 17:24:49.732" endtime="20230825 17:24:49.894"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://button[contains(text(),'Log in')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230825 01:43:16.090" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
-<status status="PASS" starttime="20230825 01:43:16.090" endtime="20230825 01:43:16.853"/>
-</kw>
-<status status="PASS" starttime="20230825 01:43:14.902" endtime="20230825 01:43:16.853"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230825 01:43:16.854" endtime="20230825 01:43:18.975"/>
-</kw>
-<doc>網站登入測試,包含開啟網頁,輸入帳號與密碼並點擊登入,關閉網頁</doc>
-<status status="PASS" starttime="20230825 01:43:11.345" endtime="20230825 01:43:18.975"/>
+<doc>使用自定義keyword lauchBrowser取代open browser,並回傳網頁標題</doc>
+<status status="PASS" starttime="20230825 17:24:43.733" endtime="20230825 17:24:49.894"/>
 </test>
-<status status="PASS" starttime="20230825 01:43:11.147" endtime="20230825 01:43:18.976"/>
+<status status="PASS" starttime="20230825 17:24:43.513" endtime="20230825 17:24:49.895"/>
 </suite>
-<status status="PASS" starttime="20230825 01:43:11.128" endtime="20230825 01:43:18.978"/>
+<status status="PASS" starttime="20230825 17:24:43.495" endtime="20230825 17:24:49.896"/>
 </suite>
 <statistics>
 <total>
@@ -59,7 +74,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="SimpleLoginTest">Suites.SimpleLoginTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Userkeywords">Suites.Userkeywords</stat>
 </suite>
 </statistics>
 <errors>

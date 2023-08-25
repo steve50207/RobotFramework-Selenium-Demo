@@ -1,19 +1,19 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.TestDrivenTest3 CSV                                                    
+Suites.TestDrivenTest2 Excel                                                  
 ==============================================================================
-LoginTestWithCSV                                                      | PASS |
+LoginTestWithExcel                                                    | PASS |
 ------------------------------------------------------------------------------
-LoginTestWithCSV                                                      | PASS |
+LoginTestWithExcel                                                    | PASS |
 ------------------------------------------------------------------------------
-LoginTestWithCSV                                                      | PASS |
+LoginTestWithExcel                                                    | PASS |
 ------------------------------------------------------------------------------
-LoginTestWithCSV                                                      | PASS |
+LoginTestWithExcel                                                    | PASS |
 ------------------------------------------------------------------------------
-LoginTestWithCSV                                                      | PASS |
+LoginTestWithExcel                                                    | PASS |
 ------------------------------------------------------------------------------
-Suites.TestDrivenTest3 CSV                                            | PASS |
+Suites.TestDrivenTest2 Excel                                          | PASS |
 5 tests, 5 passed, 0 failed
 ==============================================================================
 Suites                                                                | PASS |

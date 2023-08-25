@@ -1,84 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:42:03.183" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:23:28.639" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="SwitchToMultipleBrowsers" source="C:\Users\user\PycharmProjects\automation\TestCase\SwitchToMultipleBrowsers.robot">
-<test id="s1-s1-t1" name="MutipleBrowsersTest" line="10">
+<suite id="s1-s1" name="SpeedTests" source="C:\Users\user\PycharmProjects\automation\TestCase\SpeedTests.robot">
+<test id="s1-s1-t1" name="RegSpeedTest" line="10">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url_1}</arg>
+<arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230825 01:42:03.404" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
-<status status="PASS" starttime="20230825 01:42:03.403" endtime="20230825 01:42:07.712"/>
+<msg timestamp="20230825 17:23:28.922" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/register'.</msg>
+<status status="PASS" starttime="20230825 17:23:28.921" endtime="20230825 17:23:34.338"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230825 01:42:07.712" endtime="20230825 01:42:07.830"/>
+<status status="PASS" starttime="20230825 17:23:34.339" endtime="20230825 17:23:34.582"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230825 01:42:10.830" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230825 01:42:07.830" endtime="20230825 01:42:10.830"/>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230825 17:23:34.582" endtime="20230825 17:23:34.584"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url_2}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230825 01:42:10.831" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com'.</msg>
-<status status="PASS" starttime="20230825 01:42:10.830" endtime="20230825 01:42:13.691"/>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230825 17:23:34.585" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20230825 17:23:34.584" endtime="20230825 17:23:40.697"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230825 01:42:13.691" endtime="20230825 01:42:13.814"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:FirstName</arg>
+<arg>Kuan Yu</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 17:23:40.699" level="INFO">Typing text 'Kuan Yu' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20230825 17:23:40.697" endtime="20230825 17:23:47.192"/>
 </kw>
-<kw name="Switch Browser" library="SeleniumLibrary">
-<arg>1</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" starttime="20230825 01:42:13.815" endtime="20230825 01:42:13.815"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:LastName</arg>
+<arg>Chen</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 17:23:47.193" level="INFO">Typing text 'Chen' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20230825 17:23:47.192" endtime="20230825 17:23:53.325"/>
 </kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20230825 01:42:13.826" level="INFO">${title} = Google</msg>
-<status status="PASS" starttime="20230825 01:42:13.815" endtime="20230825 01:42:13.826"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Email</arg>
+<arg>kcem104@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 17:23:53.327" level="INFO">Typing text 'kcem104@gmail.com' into text field 'name:Email'.</msg>
+<status status="PASS" starttime="20230825 17:23:53.326" endtime="20230825 17:23:59.477"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${title}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:13.826" endtime="20230825 01:42:13.827"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Password</arg>
+<arg>G#n3ik9Th54STN</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 17:23:59.478" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'name:Password'.</msg>
+<status status="PASS" starttime="20230825 17:23:59.477" endtime="20230825 17:24:05.978"/>
 </kw>
-<kw name="Switch Browser" library="SeleniumLibrary">
-<arg>2</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" starttime="20230825 01:42:13.828" endtime="20230825 01:42:13.829"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:ConfirmPassword</arg>
+<arg>G#n3ik9Th54STN</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230825 17:24:05.983" level="INFO">Typing text 'G#n3ik9Th54STN' into text field 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20230825 17:24:05.981" endtime="20230825 17:24:12.259"/>
 </kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20230825 01:42:13.839" level="INFO">${title} = Bing</msg>
-<status status="PASS" starttime="20230825 01:42:13.829" endtime="20230825 01:42:13.839"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${title}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:13.839" endtime="20230825 01:42:13.840"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230825 01:42:16.840" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230825 01:42:13.840" endtime="20230825 01:42:16.840"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230825 01:42:16.840" endtime="20230825 01:42:29.334"/>
-</kw>
-<doc>在多個瀏覽器中進行切換,並獲取個別網頁標題</doc>
-<status status="PASS" starttime="20230825 01:42:03.402" endtime="20230825 01:42:29.335"/>
+<doc>進行網頁註冊時,測試每個keyword執行之間的不同延遲時間</doc>
+<status status="PASS" starttime="20230825 17:23:28.919" endtime="20230825 17:24:12.260"/>
 </test>
-<status status="PASS" starttime="20230825 01:42:03.207" endtime="20230825 01:42:29.336"/>
+<status status="PASS" starttime="20230825 17:23:28.671" endtime="20230825 17:24:12.261"/>
 </suite>
-<status status="PASS" starttime="20230825 01:42:03.190" endtime="20230825 01:42:29.340"/>
+<status status="PASS" starttime="20230825 17:23:28.650" endtime="20230825 17:24:12.266"/>
 </suite>
 <statistics>
 <total>
@@ -88,7 +76,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="SwitchToMultipleBrowsers">Suites.SwitchToMultipleBrowsers</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="SpeedTests">Suites.SpeedTests</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,19 +1,19 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.TestDrivenTest2 Excel                                                  
+Suites.TestDrivenTest1                                                        
 ==============================================================================
-LoginTestWithExcel                                                    | PASS |
+Right Username Empty Password                                         | PASS |
 ------------------------------------------------------------------------------
-LoginTestWithExcel                                                    | PASS |
+Right Username Wrong Password                                         | PASS |
 ------------------------------------------------------------------------------
-LoginTestWithExcel                                                    | PASS |
+Wrong Username Right Password                                         | PASS |
 ------------------------------------------------------------------------------
-LoginTestWithExcel                                                    | PASS |
+Wrong Username Empty Password                                         | PASS |
 ------------------------------------------------------------------------------
-LoginTestWithExcel                                                    | PASS |
+Wrong Username Wrong Password                                         | PASS |
 ------------------------------------------------------------------------------
-Suites.TestDrivenTest2 Excel                                          | PASS |
+Suites.TestDrivenTest1                                                | PASS |
 5 tests, 5 passed, 0 failed
 ==============================================================================
 Suites                                                                | PASS |

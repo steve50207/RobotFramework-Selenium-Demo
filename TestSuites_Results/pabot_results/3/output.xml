@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:40:27.083" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:21:34.960" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
 <suite id="s1-s1" name="DBTesting" source="C:\Users\user\PycharmProjects\automation\TestCase\DBTesting.robot">
 <kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
@@ -11,8 +11,8 @@
 <arg>${DBPort}</arg>
 <doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
 connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
-<msg timestamp="20230825 01:40:27.369" level="INFO">Connecting using : pymysql.connect(db=mydb, user=root, passwd=***, host=127.0.0.1, port=3306, charset=None) </msg>
-<status status="PASS" starttime="20230825 01:40:27.253" endtime="20230825 01:40:27.417"/>
+<msg timestamp="20230825 17:21:35.277" level="INFO">Connecting using : pymysql.connect(db=mydb, user=root, passwd=***, host=127.0.0.1, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20230825 17:21:35.122" endtime="20230825 17:21:35.317"/>
 </kw>
 <test id="s1-s1-t1" name="Drop Persons Table" line="16">
 <kw name="Execute Sql String" library="DatabaseLibrary">
@@ -20,26 +20,26 @@ connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
 <arg>DROP TABLE `persons`;</arg>
 <doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
 True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20230825 01:40:27.418" level="INFO">Executing : Execute SQL String  |  DROP TABLE `persons`; </msg>
-<msg timestamp="20230825 01:40:27.452" level="INFO">${output} = None</msg>
-<status status="PASS" starttime="20230825 01:40:27.418" endtime="20230825 01:40:27.452"/>
+<msg timestamp="20230825 17:21:35.319" level="INFO">Executing : Execute SQL String  |  DROP TABLE `persons`; </msg>
+<msg timestamp="20230825 17:21:35.349" level="INFO">${output} = None</msg>
+<status status="PASS" starttime="20230825 17:21:35.319" endtime="20230825 17:21:35.350"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:40:27.453" endtime="20230825 01:40:27.453"/>
+<status status="PASS" starttime="20230825 17:21:35.350" endtime="20230825 17:21:35.351"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output}</arg>
 <arg>None</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230825 01:40:27.454" level="INFO">Argument types are:
+<msg timestamp="20230825 17:21:35.352" level="INFO">Argument types are:
 &lt;class 'NoneType'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20230825 01:40:27.453" endtime="20230825 01:40:27.454"/>
+<status status="PASS" starttime="20230825 17:21:35.351" endtime="20230825 17:21:35.352"/>
 </kw>
 <doc>刪除表格</doc>
-<status status="PASS" starttime="20230825 01:40:27.417" endtime="20230825 01:40:27.454"/>
+<status status="PASS" starttime="20230825 17:21:35.317" endtime="20230825 17:21:35.352"/>
 </test>
 <test id="s1-s1-t2" name="Create Persons Table" line="22">
 <kw name="Execute Sql String" library="DatabaseLibrary">
@@ -47,26 +47,26 @@ True to run command without an explicit transaction commit or rollback.</doc>
 <arg>CREATE TABLE `persons`(`ID` INT PRIMARY KEY,`FirstName` VARCHAR(20),`LastName` VARCHAR(20));</arg>
 <doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
 True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20230825 01:40:27.456" level="INFO">Executing : Execute SQL String  |  CREATE TABLE `persons`(`ID` INT PRIMARY KEY,`FirstName` VARCHAR(20),`LastName` VARCHAR(20)); </msg>
-<msg timestamp="20230825 01:40:27.472" level="INFO">${output} = None</msg>
-<status status="PASS" starttime="20230825 01:40:27.455" endtime="20230825 01:40:27.472"/>
+<msg timestamp="20230825 17:21:35.355" level="INFO">Executing : Execute SQL String  |  CREATE TABLE `persons`(`ID` INT PRIMARY KEY,`FirstName` VARCHAR(20),`LastName` VARCHAR(20)); </msg>
+<msg timestamp="20230825 17:21:35.397" level="INFO">${output} = None</msg>
+<status status="PASS" starttime="20230825 17:21:35.354" endtime="20230825 17:21:35.397"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:40:27.473" endtime="20230825 01:40:27.473"/>
+<status status="PASS" starttime="20230825 17:21:35.398" endtime="20230825 17:21:35.399"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output}</arg>
 <arg>None</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230825 01:40:27.474" level="INFO">Argument types are:
+<msg timestamp="20230825 17:21:35.400" level="INFO">Argument types are:
 &lt;class 'NoneType'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20230825 01:40:27.474" endtime="20230825 01:40:27.474"/>
+<status status="PASS" starttime="20230825 17:21:35.399" endtime="20230825 17:21:35.400"/>
 </kw>
 <doc>建立表格</doc>
-<status status="PASS" starttime="20230825 01:40:27.455" endtime="20230825 01:40:27.474"/>
+<status status="PASS" starttime="20230825 17:21:35.353" endtime="20230825 17:21:35.400"/>
 </test>
 <test id="s1-s1-t3" name="Inserting Data in Persons Table" line="28">
 <kw name="Execute Sql Script" library="DatabaseLibrary">
@@ -75,31 +75,31 @@ True to run command without an explicit transaction commit or rollback.</doc>
 <doc>Executes the content of the `sqlScriptFileName` as SQL commands. Useful for setting the database to a known
 state before running your tests, or clearing out your test data after running each a test. Set optional input
 `sansTran` to True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20230825 01:40:27.476" level="INFO">Executing : Execute SQL Script  |  ./TestData/mydb_person_insertData.sql </msg>
-<msg timestamp="20230825 01:40:27.476" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(101,'John','Kennedy')</msg>
-<msg timestamp="20230825 01:40:27.478" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(102,'David','Kennedy')</msg>
-<msg timestamp="20230825 01:40:27.478" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(103,'Smith','Kennedy')</msg>
-<msg timestamp="20230825 01:40:27.479" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(104,'Marry','Kennedy')</msg>
-<msg timestamp="20230825 01:40:27.479" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(105,'Tye','Kennedy')</msg>
-<msg timestamp="20230825 01:40:27.482" level="INFO">${output} = None</msg>
-<status status="PASS" starttime="20230825 01:40:27.475" endtime="20230825 01:40:27.482"/>
+<msg timestamp="20230825 17:21:35.404" level="INFO">Executing : Execute SQL Script  |  ./TestData/mydb_person_insertData.sql </msg>
+<msg timestamp="20230825 17:21:35.404" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(101,'John','Kennedy')</msg>
+<msg timestamp="20230825 17:21:35.407" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(102,'David','Kennedy')</msg>
+<msg timestamp="20230825 17:21:35.408" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(103,'Smith','Kennedy')</msg>
+<msg timestamp="20230825 17:21:35.408" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(104,'Marry','Kennedy')</msg>
+<msg timestamp="20230825 17:21:35.409" level="INFO">Executing statement from script file: INSERT INTO `persons` VALUES(105,'Tye','Kennedy')</msg>
+<msg timestamp="20230825 17:21:35.411" level="INFO">${output} = None</msg>
+<status status="PASS" starttime="20230825 17:21:35.403" endtime="20230825 17:21:35.412"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:40:27.482" endtime="20230825 01:40:27.482"/>
+<status status="PASS" starttime="20230825 17:21:35.412" endtime="20230825 17:21:35.413"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output}</arg>
 <arg>None</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230825 01:40:27.483" level="INFO">Argument types are:
+<msg timestamp="20230825 17:21:35.414" level="INFO">Argument types are:
 &lt;class 'NoneType'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20230825 01:40:27.482" endtime="20230825 01:40:27.483"/>
+<status status="PASS" starttime="20230825 17:21:35.413" endtime="20230825 17:21:35.414"/>
 </kw>
 <doc>表格插入資料</doc>
-<status status="PASS" starttime="20230825 01:40:27.475" endtime="20230825 01:40:27.483"/>
+<status status="PASS" starttime="20230825 17:21:35.401" endtime="20230825 17:21:35.414"/>
 </test>
 <test id="s1-s1-t4" name="Check David record present in Persons Table" line="38">
 <kw name="Check If Exists In Database" library="DatabaseLibrary">
@@ -107,35 +107,35 @@ state before running your tests, or clearing out your test data after running ea
 <doc>Check if any row would be returned by given the input `selectStatement`. If there are no results, then this will
 throw an AssertionError. Set optional input `sansTran` to True to run command without an explicit transaction
 commit or rollback. The default error message can be overridden with the `msg` argument.</doc>
-<msg timestamp="20230825 01:40:27.484" level="INFO">Executing : Check If Exists In Database  |  SELECT ID FROM mydb.persons WHERE `FirstName`='David';</msg>
-<msg timestamp="20230825 01:40:27.484" level="INFO">Executing : Query  |  SELECT ID FROM mydb.persons WHERE `FirstName`='David'; </msg>
-<status status="PASS" starttime="20230825 01:40:27.484" endtime="20230825 01:40:27.485"/>
+<msg timestamp="20230825 17:21:35.417" level="INFO">Executing : Check If Exists In Database  |  SELECT ID FROM mydb.persons WHERE `FirstName`='David';</msg>
+<msg timestamp="20230825 17:21:35.417" level="INFO">Executing : Query  |  SELECT ID FROM mydb.persons WHERE `FirstName`='David'; </msg>
+<status status="PASS" starttime="20230825 17:21:35.417" endtime="20230825 17:21:35.419"/>
 </kw>
 <doc>檢查表格存在指定資料</doc>
-<status status="PASS" starttime="20230825 01:40:27.483" endtime="20230825 01:40:27.485"/>
+<status status="PASS" starttime="20230825 17:21:35.415" endtime="20230825 17:21:35.419"/>
 </test>
 <test id="s1-s1-t5" name="Check Jio record Not present in Persons Table" line="42">
 <kw name="Check If Not Exists In Database" library="DatabaseLibrary">
 <arg>SELECT ID FROM mydb.persons WHERE `FirstName`='Jio';</arg>
 <doc>This is the negation of `check_if_exists_in_database`.</doc>
-<msg timestamp="20230825 01:40:27.487" level="INFO">Executing : Check If Not Exists In Database  |  SELECT ID FROM mydb.persons WHERE `FirstName`='Jio';</msg>
-<msg timestamp="20230825 01:40:27.487" level="INFO">Executing : Query  |  SELECT ID FROM mydb.persons WHERE `FirstName`='Jio'; </msg>
-<status status="PASS" starttime="20230825 01:40:27.487" endtime="20230825 01:40:27.488"/>
+<msg timestamp="20230825 17:21:35.424" level="INFO">Executing : Check If Not Exists In Database  |  SELECT ID FROM mydb.persons WHERE `FirstName`='Jio';</msg>
+<msg timestamp="20230825 17:21:35.424" level="INFO">Executing : Query  |  SELECT ID FROM mydb.persons WHERE `FirstName`='Jio'; </msg>
+<status status="PASS" starttime="20230825 17:21:35.422" endtime="20230825 17:21:35.425"/>
 </kw>
 <doc>檢查表格不存在指定資料</doc>
-<status status="PASS" starttime="20230825 01:40:27.486" endtime="20230825 01:40:27.488"/>
+<status status="PASS" starttime="20230825 17:21:35.420" endtime="20230825 17:21:35.426"/>
 </test>
 <test id="s1-s1-t6" name="Check Person Table exists in mydb Database" line="46">
 <kw name="Table Must Exist" library="DatabaseLibrary">
 <arg>persons</arg>
 <doc>Check if the table given exists in the database. Set optional input `sansTran` to True to run command without an
 explicit transaction commit or rollback. The default error message can be overridden with the `msg` argument.</doc>
-<msg timestamp="20230825 01:40:27.489" level="INFO">Executing : Table Must Exist  |  persons </msg>
-<msg timestamp="20230825 01:40:27.490" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='persons' </msg>
-<status status="PASS" starttime="20230825 01:40:27.489" endtime="20230825 01:40:27.497"/>
+<msg timestamp="20230825 17:21:35.429" level="INFO">Executing : Table Must Exist  |  persons </msg>
+<msg timestamp="20230825 17:21:35.430" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='persons' </msg>
+<status status="PASS" starttime="20230825 17:21:35.429" endtime="20230825 17:21:35.437"/>
 </kw>
 <doc>檢查表格存在於資料庫</doc>
-<status status="PASS" starttime="20230825 01:40:27.488" endtime="20230825 01:40:27.497"/>
+<status status="PASS" starttime="20230825 17:21:35.426" endtime="20230825 17:21:35.438"/>
 </test>
 <test id="s1-s1-t7" name="Verify Row Count is Zero" line="50">
 <kw name="Row Count Is 0" library="DatabaseLibrary">
@@ -143,12 +143,12 @@ explicit transaction commit or rollback. The default error message can be overri
 <doc>Check if any rows are returned from the submitted `selectStatement`. If there are, then this will throw an
 AssertionError. Set optional input `sansTran` to True to run command without an explicit transaction commit or
 rollback. The default error message can be overridden with the `msg` argument.</doc>
-<msg timestamp="20230825 01:40:27.498" level="INFO">Executing : Row Count Is 0  |  selectStatement</msg>
-<msg timestamp="20230825 01:40:27.498" level="INFO">Executing : Row Count  |  SELECT * FROM mydb.persons WHERE `FirstName`='xyz'; </msg>
-<status status="PASS" starttime="20230825 01:40:27.498" endtime="20230825 01:40:27.499"/>
+<msg timestamp="20230825 17:21:35.441" level="INFO">Executing : Row Count Is 0  |  selectStatement</msg>
+<msg timestamp="20230825 17:21:35.441" level="INFO">Executing : Row Count  |  SELECT * FROM mydb.persons WHERE `FirstName`='xyz'; </msg>
+<status status="PASS" starttime="20230825 17:21:35.440" endtime="20230825 17:21:35.442"/>
 </kw>
 <doc>確認搜尋結果筆數等於0</doc>
-<status status="PASS" starttime="20230825 01:40:27.497" endtime="20230825 01:40:27.499"/>
+<status status="PASS" starttime="20230825 17:21:35.438" endtime="20230825 17:21:35.442"/>
 </test>
 <test id="s1-s1-t8" name="Verify Row Count is Equal to Some Value" line="54">
 <kw name="Row Count Is Equal To X" library="DatabaseLibrary">
@@ -157,12 +157,12 @@ rollback. The default error message can be overridden with the `msg` argument.</
 <doc>Check if the number of rows returned from `selectStatement` is equal to the value submitted. If not, then this
 will throw an AssertionError. Set optional input `sansTran` to True to run command without an explicit
 transaction commit or rollback. The default error message can be overridden with the `msg` argument.</doc>
-<msg timestamp="20230825 01:40:27.500" level="INFO">Executing : Row Count Is Equal To X  |  SELECT * FROM mydb.persons WHERE `FirstName`='David';  |  1</msg>
-<msg timestamp="20230825 01:40:27.501" level="INFO">Executing : Row Count  |  SELECT * FROM mydb.persons WHERE `FirstName`='David'; </msg>
-<status status="PASS" starttime="20230825 01:40:27.500" endtime="20230825 01:40:27.501"/>
+<msg timestamp="20230825 17:21:35.446" level="INFO">Executing : Row Count Is Equal To X  |  SELECT * FROM mydb.persons WHERE `FirstName`='David';  |  1</msg>
+<msg timestamp="20230825 17:21:35.446" level="INFO">Executing : Row Count  |  SELECT * FROM mydb.persons WHERE `FirstName`='David'; </msg>
+<status status="PASS" starttime="20230825 17:21:35.445" endtime="20230825 17:21:35.447"/>
 </kw>
 <doc>確認搜尋結果筆數等於某個數值</doc>
-<status status="PASS" starttime="20230825 01:40:27.499" endtime="20230825 01:40:27.502"/>
+<status status="PASS" starttime="20230825 17:21:35.443" endtime="20230825 17:21:35.447"/>
 </test>
 <test id="s1-s1-t9" name="Verify Row Count is Greater to Some Value" line="58">
 <kw name="Row Count Is Greater Than X" library="DatabaseLibrary">
@@ -171,12 +171,12 @@ transaction commit or rollback. The default error message can be overridden with
 <doc>Check if the number of rows returned from `selectStatement` is greater than the value submitted. If not, then
 this will throw an AssertionError. Set optional input `sansTran` to True to run command without an explicit
 transaction commit or rollback. The default error message can be overridden with the `msg` argument.</doc>
-<msg timestamp="20230825 01:40:27.503" level="INFO">Executing : Row Count Is Greater Than X  |  SELECT * FROM mydb.persons WHERE `FirstName`='David';  |  0</msg>
-<msg timestamp="20230825 01:40:27.503" level="INFO">Executing : Row Count  |  SELECT * FROM mydb.persons WHERE `FirstName`='David'; </msg>
-<status status="PASS" starttime="20230825 01:40:27.503" endtime="20230825 01:40:27.504"/>
+<msg timestamp="20230825 17:21:35.451" level="INFO">Executing : Row Count Is Greater Than X  |  SELECT * FROM mydb.persons WHERE `FirstName`='David';  |  0</msg>
+<msg timestamp="20230825 17:21:35.451" level="INFO">Executing : Row Count  |  SELECT * FROM mydb.persons WHERE `FirstName`='David'; </msg>
+<status status="PASS" starttime="20230825 17:21:35.450" endtime="20230825 17:21:35.453"/>
 </kw>
 <doc>確認搜尋結果筆數大於某個數值</doc>
-<status status="PASS" starttime="20230825 01:40:27.502" endtime="20230825 01:40:27.504"/>
+<status status="PASS" starttime="20230825 17:21:35.448" endtime="20230825 17:21:35.453"/>
 </test>
 <test id="s1-s1-t10" name="Verify Row Count is Lesser to Some Value" line="62">
 <kw name="Row Count Is Less Than X" library="DatabaseLibrary">
@@ -185,12 +185,12 @@ transaction commit or rollback. The default error message can be overridden with
 <doc>Check if the number of rows returned from `selectStatement` is less than the value submitted. If not, then this
 will throw an AssertionError. Set optional input `sansTran` to True to run command without an explicit
 transaction commit or rollback.</doc>
-<msg timestamp="20230825 01:40:27.506" level="INFO">Executing : Row Count Is Less Than X  |  SELECT * FROM mydb.persons WHERE `FirstName`='David';  |  2</msg>
-<msg timestamp="20230825 01:40:27.507" level="INFO">Executing : Row Count  |  SELECT * FROM mydb.persons WHERE `FirstName`='David'; </msg>
-<status status="PASS" starttime="20230825 01:40:27.506" endtime="20230825 01:40:27.507"/>
+<msg timestamp="20230825 17:21:35.458" level="INFO">Executing : Row Count Is Less Than X  |  SELECT * FROM mydb.persons WHERE `FirstName`='David';  |  2</msg>
+<msg timestamp="20230825 17:21:35.458" level="INFO">Executing : Row Count  |  SELECT * FROM mydb.persons WHERE `FirstName`='David'; </msg>
+<status status="PASS" starttime="20230825 17:21:35.457" endtime="20230825 17:21:35.459"/>
 </kw>
 <doc>確認搜尋結果筆數小於某個數值</doc>
-<status status="PASS" starttime="20230825 01:40:27.504" endtime="20230825 01:40:27.508"/>
+<status status="PASS" starttime="20230825 17:21:35.454" endtime="20230825 17:21:35.460"/>
 </test>
 <test id="s1-s1-t11" name="Update Record in Table Persons" line="66">
 <kw name="Execute Sql String" library="DatabaseLibrary">
@@ -198,26 +198,26 @@ transaction commit or rollback.</doc>
 <arg>UPDATE mydb.persons SET `FirstName`='Jio' WHERE ID=104;</arg>
 <doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
 True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20230825 01:40:27.509" level="INFO">Executing : Execute SQL String  |  UPDATE mydb.persons SET `FirstName`='Jio' WHERE ID=104; </msg>
-<msg timestamp="20230825 01:40:27.511" level="INFO">${output} = None</msg>
-<status status="PASS" starttime="20230825 01:40:27.508" endtime="20230825 01:40:27.511"/>
+<msg timestamp="20230825 17:21:35.463" level="INFO">Executing : Execute SQL String  |  UPDATE mydb.persons SET `FirstName`='Jio' WHERE ID=104; </msg>
+<msg timestamp="20230825 17:21:35.466" level="INFO">${output} = None</msg>
+<status status="PASS" starttime="20230825 17:21:35.462" endtime="20230825 17:21:35.466"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:40:27.512" endtime="20230825 01:40:27.512"/>
+<status status="PASS" starttime="20230825 17:21:35.467" endtime="20230825 17:21:35.467"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output}</arg>
 <arg>None</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230825 01:40:27.513" level="INFO">Argument types are:
+<msg timestamp="20230825 17:21:35.469" level="INFO">Argument types are:
 &lt;class 'NoneType'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20230825 01:40:27.512" endtime="20230825 01:40:27.513"/>
+<status status="PASS" starttime="20230825 17:21:35.468" endtime="20230825 17:21:35.469"/>
 </kw>
 <doc>更新表格資料</doc>
-<status status="PASS" starttime="20230825 01:40:27.508" endtime="20230825 01:40:27.513"/>
+<status status="PASS" starttime="20230825 17:21:35.460" endtime="20230825 17:21:35.469"/>
 </test>
 <test id="s1-s1-t12" name="Retrieve Record in Table Persons" line="72">
 <kw name="Query" library="DatabaseLibrary">
@@ -226,17 +226,17 @@ True to run command without an explicit transaction commit or rollback.</doc>
 <doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
 input `sansTran` to True to run command without an explicit transaction commit or rollback.
 Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
-<msg timestamp="20230825 01:40:27.514" level="INFO">Executing : Query  |  SELECT * FROM mydb.persons; </msg>
-<msg timestamp="20230825 01:40:27.516" level="INFO">@{queryResult} = [ (101, 'John', 'Kennedy') | (102, 'David', 'Kennedy') | (103, 'Smith', 'Kennedy') | (104, 'Jio', 'Kennedy') | (105, 'Tye', 'Kennedy') ]</msg>
-<status status="PASS" starttime="20230825 01:40:27.514" endtime="20230825 01:40:27.516"/>
+<msg timestamp="20230825 17:21:35.472" level="INFO">Executing : Query  |  SELECT * FROM mydb.persons; </msg>
+<msg timestamp="20230825 17:21:35.473" level="INFO">@{queryResult} = [ (101, 'John', 'Kennedy') | (102, 'David', 'Kennedy') | (103, 'Smith', 'Kennedy') | (104, 'Jio', 'Kennedy') | (105, 'Tye', 'Kennedy') ]</msg>
+<status status="PASS" starttime="20230825 17:21:35.471" endtime="20230825 17:21:35.473"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>many @{queryResult}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:40:27.516" endtime="20230825 01:40:27.516"/>
+<status status="PASS" starttime="20230825 17:21:35.473" endtime="20230825 17:21:35.474"/>
 </kw>
 <doc>讀取表格資料</doc>
-<status status="PASS" starttime="20230825 01:40:27.513" endtime="20230825 01:40:27.516"/>
+<status status="PASS" starttime="20230825 17:21:35.470" endtime="20230825 17:21:35.474"/>
 </test>
 <test id="s1-s1-t13" name="Delete Records in Table" line="77">
 <kw name="Execute Sql String" library="DatabaseLibrary">
@@ -244,38 +244,38 @@ Set optional input `returnAsDict` to True to return values as a list of dictiona
 <arg>DELETE FROM `persons`;</arg>
 <doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
 True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20230825 01:40:27.517" level="INFO">Executing : Execute SQL String  |  DELETE FROM `persons`; </msg>
-<msg timestamp="20230825 01:40:27.521" level="INFO">${output} = None</msg>
-<status status="PASS" starttime="20230825 01:40:27.517" endtime="20230825 01:40:27.521"/>
+<msg timestamp="20230825 17:21:35.476" level="INFO">Executing : Execute SQL String  |  DELETE FROM `persons`; </msg>
+<msg timestamp="20230825 17:21:35.480" level="INFO">${output} = None</msg>
+<status status="PASS" starttime="20230825 17:21:35.476" endtime="20230825 17:21:35.480"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:40:27.521" endtime="20230825 01:40:27.522"/>
+<status status="PASS" starttime="20230825 17:21:35.480" endtime="20230825 17:21:35.481"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${output}</arg>
 <arg>None</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230825 01:40:27.522" level="INFO">Argument types are:
+<msg timestamp="20230825 17:21:35.482" level="INFO">Argument types are:
 &lt;class 'NoneType'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20230825 01:40:27.522" endtime="20230825 01:40:27.522"/>
+<status status="PASS" starttime="20230825 17:21:35.481" endtime="20230825 17:21:35.482"/>
 </kw>
 <doc>刪除表格全部資料</doc>
-<status status="PASS" starttime="20230825 01:40:27.517" endtime="20230825 01:40:27.522"/>
+<status status="PASS" starttime="20230825 17:21:35.474" endtime="20230825 17:21:35.482"/>
 </test>
 <kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
 <doc>Disconnects from the database.
 By default it's not an error if there was no open database connection -
 suitable for usage as a teardown.
 However you can enforce it using the `error_if_no_connection` parameter.</doc>
-<msg timestamp="20230825 01:40:27.523" level="INFO">Executing : Disconnect From Database</msg>
-<status status="PASS" starttime="20230825 01:40:27.523" endtime="20230825 01:40:27.523"/>
+<msg timestamp="20230825 17:21:35.484" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20230825 17:21:35.483" endtime="20230825 17:21:35.484"/>
 </kw>
-<status status="PASS" starttime="20230825 01:40:27.106" endtime="20230825 01:40:27.523"/>
+<status status="PASS" starttime="20230825 17:21:35.015" endtime="20230825 17:21:35.484"/>
 </suite>
-<status status="PASS" starttime="20230825 01:40:27.091" endtime="20230825 01:40:27.524"/>
+<status status="PASS" starttime="20230825 17:21:34.975" endtime="20230825 17:21:35.486"/>
 </suite>
 <statistics>
 <total>

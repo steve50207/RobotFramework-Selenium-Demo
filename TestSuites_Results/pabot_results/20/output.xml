@@ -1,94 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 01:42:32.724" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20230825 17:24:00.520" rpa="false" schemaversion="4">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="TableDemo" source="C:\Users\user\PycharmProjects\automation\TestCase\TableDemo.robot">
-<test id="s1-s1-t1" name="TableValidations" line="9">
+<suite id="s1-s1" name="TabbedWindows" source="C:\Users\user\PycharmProjects\automation\TestCase\TabbedWindows.robot">
+<test id="s1-s1-t1" name="TabbedWindowsTest" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230825 01:42:34.194" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<status status="PASS" starttime="20230825 01:42:34.194" endtime="20230825 01:42:40.768"/>
+<msg timestamp="20230825 17:24:01.829" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Windows.html'.</msg>
+<status status="PASS" starttime="20230825 17:24:01.828" endtime="20230825 17:24:07.468"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230825 01:42:40.768" endtime="20230825 01:42:40.892"/>
+<status status="PASS" starttime="20230825 17:24:07.469" endtime="20230825 17:24:07.632"/>
 </kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${rows}</var>
-<arg>//table[@name="BookTable"]/tbody/tr</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20230825 01:42:40.917" level="INFO">${rows} = 7</msg>
-<status status="PASS" starttime="20230825 01:42:40.892" endtime="20230825 01:42:40.917"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="Tabbed"]/a/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230825 17:24:07.635" level="INFO">Clicking element 'xpath://*[@id="Tabbed"]/a/button'.</msg>
+<status status="PASS" starttime="20230825 17:24:07.632" endtime="20230825 17:24:07.825"/>
 </kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${cols}</var>
-<arg>//table[@name="BookTable"]/tbody/tr[1]/th</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20230825 01:42:40.932" level="INFO">${cols} = 4</msg>
-<status status="PASS" starttime="20230825 01:42:40.917" endtime="20230825 01:42:40.932"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Selenium</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230825 17:24:07.825" endtime="20230825 17:24:10.098"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${rows}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:40.932" endtime="20230825 01:42:40.933"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="main_navbar"]/ul/li[3]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230825 17:24:10.100" level="INFO">Clicking element 'xpath://*[@id="main_navbar"]/ul/li[3]/a/span'.</msg>
+<status status="PASS" starttime="20230825 17:24:10.098" endtime="20230825 17:24:12.135"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${cols}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:40.933" endtime="20230825 01:42:40.933"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${data}</var>
-<arg>//table[@name="BookTable"]/tbody/tr[5]/td[1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230825 01:42:41.069" level="INFO">${data} = Master In Selenium</msg>
-<status status="PASS" starttime="20230825 01:42:40.934" endtime="20230825 01:42:41.069"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${data}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230825 01:42:41.069" endtime="20230825 01:42:41.070"/>
-</kw>
-<kw name="Table Column Should Contain" library="SeleniumLibrary">
-<arg>//table[@name="BookTable"]</arg>
+<kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
-<arg>Javascript</arg>
-<doc>Verifies table column contains text ``expected``.</doc>
-<status status="PASS" starttime="20230825 01:42:41.070" endtime="20230825 01:42:41.177"/>
-</kw>
-<kw name="Table Row Should Contain" library="SeleniumLibrary">
-<arg>//table[@name="BookTable"]</arg>
-<arg>2</arg>
-<arg>Amit</arg>
-<doc>Verifies that table row contains text ``expected``.</doc>
-<status status="PASS" starttime="20230825 01:42:41.178" endtime="20230825 01:42:41.231"/>
-</kw>
-<kw name="Table Cell Should Contain" library="SeleniumLibrary">
-<arg>//table[@name="BookTable"]</arg>
-<arg>2</arg>
-<arg>4</arg>
-<arg>300</arg>
-<doc>Verifies table cell contains text ``expected``.</doc>
-<msg timestamp="20230825 01:42:41.298" level="INFO">Table cell contains '300'.</msg>
-<status status="PASS" starttime="20230825 01:42:41.231" endtime="20230825 01:42:41.299"/>
-</kw>
-<kw name="Table Header Should Contain" library="SeleniumLibrary">
-<arg>//table[@name="BookTable"]</arg>
-<arg>Price</arg>
-<doc>Verifies table header contains text ``expected``.</doc>
-<status status="PASS" starttime="20230825 01:42:41.299" endtime="20230825 01:42:41.417"/>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230825 17:24:15.136" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230825 17:24:12.136" endtime="20230825 17:24:15.136"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230825 01:42:41.417" endtime="20230825 01:42:47.615"/>
+<status status="PASS" starttime="20230825 17:24:15.136" endtime="20230825 17:24:21.442"/>
 </kw>
-<doc>網頁表格元素驗證,包含row,column,header,cell等表格元素</doc>
-<status status="PASS" starttime="20230825 01:42:34.192" endtime="20230825 01:42:47.616"/>
+<doc>瀏覽器分頁切換測試,包含點擊按鈕新增分頁,切換分頁後再點擊網頁連結</doc>
+<status status="PASS" starttime="20230825 17:24:01.826" endtime="20230825 17:24:21.442"/>
 </test>
-<status status="PASS" starttime="20230825 01:42:32.842" endtime="20230825 01:42:47.617"/>
+<status status="PASS" starttime="20230825 17:24:00.628" endtime="20230825 17:24:21.444"/>
 </suite>
-<status status="PASS" starttime="20230825 01:42:32.807" endtime="20230825 01:42:47.618"/>
+<status status="PASS" starttime="20230825 17:24:00.591" endtime="20230825 17:24:21.446"/>
 </suite>
 <statistics>
 <total>
@@ -98,7 +56,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="TableDemo">Suites.TableDemo</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TabbedWindows">Suites.TabbedWindows</stat>
 </suite>
 </statistics>
 <errors>
