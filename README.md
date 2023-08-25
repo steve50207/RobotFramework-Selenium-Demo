@@ -11,9 +11,12 @@
 
 ## 測試工具: 
 - 本項網頁自動化測試專案使用以下測試工具:
-    - RobotFramework: Python Based 自動化測試框架。
-    - Selenium: 網頁自動化測試套件。
-    - Jenkins: Java Based 持續整合工具(Continuous Integration Tool)，能提供自動建置(autobuild)服務。
+    - RobotFramework: 
+        - Python Based 自動化測試框架。
+    - Selenium: 
+        - 網頁自動化測試套件。
+    - Jenkins: 
+        - Java Based 持續整合工具(Continuous Integration Tool)，能提供自動建置(autobuild)服務。
 
 ## 測試環境:
 - 本項網頁自動化測試專案在下列測試環境中執行:
