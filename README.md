@@ -26,7 +26,7 @@
     - Jenkins: 2.414.1 
         - 採用Generic Java package (.war)。
         - 需要先安裝Java JDK，在cmd輸入指令 java -jar jenkins.war啟動Jenkins網頁。
-        - 預設網頁: 127.0.0.1:8080。
+        - 預設網頁: [127.0.0.1:8080](http://localhost:8080/)。
     - Python 3rd Party Packages: 參考requirements.txt
         - 可按照下列Python pip指令完成Packages安裝:
             - pip install  robot framework
