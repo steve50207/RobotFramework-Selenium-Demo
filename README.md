@@ -39,7 +39,7 @@
             - pip install  PyMySQL
             - pip install -U robotframework-datadriver[XLS]
             - pip install -U robotframework-pabot
-    - 測試環境架構圖:
+    - RobotFramework架構圖:
         - ![](https://hackmd.io/_uploads/Sy9w6AX22.png)
       
 ## 測試文件架構:
