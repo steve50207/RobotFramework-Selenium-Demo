@@ -42,15 +42,15 @@
 ## 測試文件架構:
 - A. RegistTest:
     - PageObjects\locators.py
-      定義註冊中需要操作的網頁元素位置，採用三種定位方式，如id、name、xpath。
+      - 定義註冊中需要操作的網頁元素位置，採用三種定位方式，如id、name、xpath。
     - Resources\regist_keywords.robot
-      SeleniumLirary定義的keyword(API)重新包裝成自定義keyword，將locators.py定義的locator代入使用，讓RegistTest.robot能呼叫使用。
+      - SeleniumLirary定義的keyword(API)重新包裝成自定義keyword，將locators.py定義的locator代入使用，讓RegistTest.robot能呼叫使用。
     - TestData\RegistData.xlsx
-      定義註冊資料，包含姓名、性別、興趣、任職單位、註冊帳號、註冊密碼、信箱、連絡電話、備註訊息。
+      - 定義註冊資料，包含姓名、性別、興趣、任職單位、註冊帳號、註冊密碼、信箱、連絡電話、備註訊息。
     - TestCase\RegistTest.robot
-      執行網頁註冊功能測試主程式，將自定義keyword再次包裝成測試範本(test template)並重複執行，每輪執行會自動帶入excel註冊資料，並驗證註冊資料有確實出現在網頁尾端表格內。
+      - 執行網頁註冊功能測試主程式，將自定義keyword再次包裝成測試範本(test template)並重複執行，每輪執行會自動帶入excel註冊資料，並驗證註冊資料有確實出現在網頁尾端表格內。
     - RegistTestCase_run.bat
-      windows shell script，包含python執行測試指令，可以透過Jenkins設定觸發完成RegistTest測試。
+      - windows shell script，包含python執行測試指令，可以透過Jenkins設定觸發完成RegistTest測試。
     - 備註: 採用Page Object Model(POM)的設計模式進行source code文件劃分，可避免出現變數重複定義或TestCase重複測試的情況。
         - ![](https://hackmd.io/_uploads/rk4JZZf6n.png)
     
