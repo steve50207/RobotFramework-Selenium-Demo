@@ -4,9 +4,9 @@
 - 近期正在進行軟體測試面試，有鑑於在前公司負責專案有使用到Selenium網頁自動化測試，因此開立此專案進行複習與練習，亦作為面試Demo使用。
 
 ## 專案目標:
-- A. RegistTest:
+- RegistTest:
      - 將Excel自定義的註冊資料自動填寫在註冊網站，並確認註冊資料如預期顯示在網頁尾端表格內，驗證網頁註冊系統功能正確運作。
-- B. AllTestSuites:
+- AllTestSuites:
      - 透過Jenkins進行自動建置(autobuild)，觸發多個網頁自動化測試套件(TestSuite)，並且透過pabot平行執行，達到一鍵執行完整網頁測試計畫的效果。
 
 ## 測試工具: 
@@ -40,7 +40,7 @@
         - ![](https://hackmd.io/_uploads/Sy9w6AX22.png)
       
 ## 測試文件架構:
-- A. RegistTest:
+- RegistTest:
     - PageObjects\locators.py
       - 定義註冊中需要操作的網頁元素位置，採用三種定位方式，如id、name、xpath。
     - Resources\regist_keywords.robot
@@ -54,7 +54,7 @@
     - 備註: 採用Page Object Model(POM)的設計模式進行source code文件劃分，可避免出現變數重複定義或TestCase重複測試的情況。
         - ![](https://hackmd.io/_uploads/rk4JZZf6n.png)
     
-- B. AllTestSuites:
+- AllTestSuites:
     - PageObjects
        - 定義網頁測試操作中的網頁元素位置。
     - TestData
@@ -65,12 +65,12 @@
        - windows shell script，包含python執行測試指令，可以透過Jenkins設定觸發完成AllTestSuites測試。
 
 ## 測試結果:
-- A. RegistTest:
+- RegistTest:
      - DemoVideo\RegistTest.mp4
        - RegistTest測試展示影片。
      - RegistTest_Result\report.html
        - 執行RegistTestCase_run.bat後產生的測試結果報表。
-- B. AllTestSuites:
+- AllTestSuites:
      - DemoVideo\AllTestSuites.mp4
        - AllTestSuites測試展示影片。
      - TestSuites_Results\report.html
