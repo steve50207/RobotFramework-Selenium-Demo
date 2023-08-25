@@ -1,5 +1,7 @@
 # RobotFramework-Selenium-Demo
 
+###### tags: `Robot Framework`
+
 ## 專案動機: 
 - 近期正在進行軟體測試面試，有鑑於在前公司負責專案有使用到Selenium網頁自動化測試，因此開立此專案進行複習與練習，亦作為面試Demo使用。
 
