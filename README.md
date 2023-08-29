@@ -42,7 +42,7 @@
             - pip install -U robotframework-datadriver[XLS]
             - pip install -U robotframework-pabot
     - RobotFramework架構圖:
-        - ![](https://hackmd.io/_uploads/Sy9w6AX22.png)
+        - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/1.png)
       
 ## 測試文件架構:
 - RegistTest:
@@ -57,7 +57,7 @@
     - RegistTestCase_run.bat
       - windows shell script，包含python執行測試指令，可以透過Jenkins設定觸發完成RegistTest測試。
     - 備註: 採用Page Object Model(POM)的設計模式進行source code文件劃分，可避免出現變數重複定義或TestCase重複測試的情況。
-        - ![](https://hackmd.io/_uploads/rk4JZZf6n.png)
+        - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/2.png)
     
 - AllTestSuites:
     - PageObjects
