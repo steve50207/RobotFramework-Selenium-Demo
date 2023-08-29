@@ -75,18 +75,18 @@
        - RegistTest測試展示影片。
      - RegistTest_Result\report.html
        - 執行RegistTestCase_run.bat後產生的測試結果報表。
-           - [image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/3.png)
-           - [image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/4.png)
-           - [image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/5.png)
+           - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/3.png)
+           - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/4.png)
+           - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/5.png)
 - AllTestSuites:
      - DemoVideo\AllTestSuites.mp4
        - AllTestSuites測試展示影片。
      - TestSuites_Results\report.html
        - 執行AllTestSuites_run.bat後產生的測試結果報表。 
-           - [image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/6.png)
-           - [image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/7.png)
-           - [image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/8.png)
-           - [image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png9.png)
+           - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/6.png)
+           - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/7.png)
+           - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/8.png)
+           - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/9.png)
 
 
 ## 相關連結
