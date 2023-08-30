@@ -26,7 +26,7 @@
     - Python: Python 3.11.0
     - PyCharm: Community 2023.2
     - Chrome Webdriver: 116.0.5845.96
-        - 需要將Python311\Scripts設定為環境變數，再將webdriver放至Python311\Scripts資料夾。
+        - 需要將Python311\Scripts設定為環境變數Path，再將webdriver放至Python311\Scripts資料夾。
     - Java JDK: 17.0.8 
     - Jenkins: 2.414.1 
         - 採用Generic Java package (.war)。
