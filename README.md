@@ -2,6 +2,11 @@
 
 ###### tags: `Robot Framework`
 
+## 相關連結
+- [RobotFramework-Selenium-Demo專案連結](https://github.com/steve50207/RobotFramework-Selenium-Demo)
+- [Web Automation using Robot Framework(Selenium with Python)](https://https://www.youtube.com/playlist?list=PLUDwpEzHYYLsCHiiihnwl3L0xPspL7BPG)
+- [Robot Framework + Selenium YT影片練習筆記](https://hackmd.io/@MJUsbP-5S_-z1aM5n6NvlQ/HJ0tiRmh3)
+
 ## 專案動機
 - 近期正在進行軟體測試面試，有鑑於在前公司負責專案有使用到Selenium網頁自動化測試，因此開立此專案進行複習與練習，亦作為面試Demo使用。
 
@@ -89,6 +94,3 @@
            - ![image](https://github.com/steve50207/RobotFramework-Selenium-Demo/blob/main/png/9.png)
 
 
-## 相關連結
-- [Web Automation using Robot Framework(Selenium with Python)](https://https://www.youtube.com/playlist?list=PLUDwpEzHYYLsCHiiihnwl3L0xPspL7BPG)
-- [Robot Framework + Selenium YT影片練習筆記](https://hackmd.io/@MJUsbP-5S_-z1aM5n6NvlQ/HJ0tiRmh3)
